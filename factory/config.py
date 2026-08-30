@@ -71,7 +71,7 @@ DAY_ORDER: List[str] = [
 class Settings(BaseModel):
     # LLM Settings
     llm_provider: str = Field(default_factory=lambda: _clean_env("LLM_PROVIDER", "gemini").lower())
-    model_name: str = Field(default_factory=lambda: _clean_env("MODEL_NAME", "gemini-2.0-flash"))
+    model_name: str = Field(default_factory=lambda: _clean_env("MODEL_NAME", "gemini-3.6-flash"))
     gemini_api_key: Optional[str] = Field(default_factory=lambda: _clean_env("GEMINI_API_KEY"))
     openai_api_key: Optional[str] = Field(default_factory=lambda: _clean_env("OPENAI_API_KEY"))
     groq_api_key: Optional[str] = Field(default_factory=lambda: _clean_env("GROQ_API_KEY"))
