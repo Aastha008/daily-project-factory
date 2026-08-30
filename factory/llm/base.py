@@ -1,5 +1,5 @@
 """
-Abstract base interface for LLM providers with robust JSON parsing and resilience.
+Abstract base interface for LLM providers with robust JSON parsing and truncated response recovery.
 """
 
 from __future__ import annotations
@@ -63,7 +63,7 @@ class LLMProvider(abc.ABC):
     def extract_and_parse_json(text: str) -> Dict[str, Any]:
         """
         Extract and parse JSON from LLM output, resilient to markdown blocks,
-        trailing commas, unquoted keys, and surrounding commentary.
+        trailing commas, unquoted keys, and truncated streams.
         """
         if not text or not text.strip():
             raise ValueError("Empty response received from LLM")
@@ -105,6 +105,32 @@ class LLMProvider(abc.ABC):
         except Exception:
             pass
 
-        # Step 4: Fallback mock structure if output was unrecoverably corrupted
+        # Step 4: Truncation Recovery - Extract all completed key-value pairs via regex tokenization
+        recovered_dict: Dict[str, Any] = {}
+        file_matches = re.finditer(
+            r'"([a-zA-Z0-9_\-/\.]+\.[a-zA-Z0-9]+)"\s*:\s*"((?:[^"\\]|\\.)*)"', cleaned
+        )
+        for m in file_matches:
+            k = m.group(1)
+            raw_v = m.group(2)
+            try:
+                v = json.loads(f'"{raw_v}"')
+            except Exception:
+                v = raw_v.replace(r"\n", "\n").replace(r"\"", '"').replace(r"\\", "\\")
+            recovered_dict[k] = v
+
+        if recovered_dict:
+            return {"files": recovered_dict}
+
+        # Step 5: Generic key-value recovery for structured objects
+        kv_matches = re.finditer(r'"([a-zA-Z0-9_]+)"\s*:\s*"((?:[^"\\]|\\.)*)"', cleaned)
+        for m in kv_matches:
+            k = m.group(1)
+            raw_v = m.group(2)
+            recovered_dict[k] = raw_v.replace(r"\n", "\n").replace(r"\"", '"')
+
+        if recovered_dict:
+            return recovered_dict
+
         snippet = cleaned[:200] if len(cleaned) > 200 else cleaned
         raise ValueError(f"Failed to parse valid JSON from LLM response. Snippet: '{snippet}'")

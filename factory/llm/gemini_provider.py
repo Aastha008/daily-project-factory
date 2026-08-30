@@ -1,5 +1,5 @@
 """
-Google Gemini LLM Provider implementation with strict text-only model filtering.
+Google Gemini LLM Provider implementation with strict text-only model filtering and 8k output buffer.
 """
 
 from __future__ import annotations
@@ -11,19 +11,21 @@ from factory.utils.logger import factory_logger
 
 
 class GeminiProvider(LLMProvider):
-    """Google Gemini API Provider with text-only active model filtering."""
+    """Google Gemini API Provider with text-only active model filtering and 8192 output tokens."""
 
-    # Prioritized list of active text generation models (no TTS/audio models)
     PRIMARY_MODELS = [
+        "gemini-2.5-flash",
         "gemini-3.6-flash",
+        "gemini-2.5-pro",
         "gemini-3.1-pro-preview",
+        "gemini-flash-latest",
         "gemini-1.5-flash-latest",
         "gemini-1.5-pro-latest",
     ]
 
-    def __init__(self, model_name: str = "gemini-3.6-flash", api_key: Optional[str] = None):
+    def __init__(self, model_name: str = "gemini-2.5-flash", api_key: Optional[str] = None):
         key = api_key or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
-        super().__init__(model_name=model_name or "gemini-3.6-flash", api_key=key)
+        super().__init__(model_name=model_name or "gemini-2.5-flash", api_key=key)
         if not self.api_key:
             raise ValueError("GEMINI_API_KEY or GOOGLE_API_KEY must be provided for GeminiProvider")
 
@@ -78,15 +80,15 @@ class GeminiProvider(LLMProvider):
         last_error = None
         for model in models_to_try:
             try:
-                config_kwargs = {}
+                config_kwargs = {
+                    "max_output_tokens": max_tokens or 8192,  # Full 8k output buffer to prevent truncated code
+                }
                 if system_prompt:
                     config_kwargs["system_instruction"] = system_prompt
                 if temperature is not None:
                     config_kwargs["temperature"] = temperature
-                if max_tokens:
-                    config_kwargs["max_output_tokens"] = max_tokens
 
-                config = self.types.GenerateContentConfig(**config_kwargs) if config_kwargs else None
+                config = self.types.GenerateContentConfig(**config_kwargs)
 
                 response = self.client.models.generate_content(
                     model=model,
