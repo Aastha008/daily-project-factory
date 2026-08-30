@@ -67,13 +67,27 @@ class TestingAgent:
                         pass
         return syntax_errors
 
+    def install_project_dependencies(self, project_dir: Path) -> None:
+        """Ensure project's requirements.txt dependencies are installed."""
+        req_file = project_dir / "requirements.txt"
+        if req_file.exists():
+            try:
+                subprocess.run(
+                    [sys.executable, "-m", "pip", "install", "-q", "-r", str(req_file)],
+                    cwd=project_dir,
+                    capture_output=True,
+                    timeout=60,
+                    check=False,
+                )
+            except Exception as exc:
+                factory_logger.warning(f"Could not pre-install project requirements: {exc}")
+
     def run_pytest(self, project_dir: Path) -> TestResult:
         """Execute pytest in project directory and parse results."""
         start_time = time.perf_counter()
         tests_dir = project_dir / "tests"
 
         if not tests_dir.exists() or not any(tests_dir.glob("test_*.py")):
-            # If no pytest tests are defined, check if syntax is ok
             return TestResult(
                 status="passed",
                 tests_run=1,
@@ -82,6 +96,9 @@ class TestingAgent:
                 duration_seconds=0.1,
                 stdout="Syntax verified. No explicit test files found.",
             )
+
+        # Pre-install dependencies if needed
+        self.install_project_dependencies(project_dir)
 
         # Set PYTHONPATH so tests can import from project root
         env = os.environ.copy()
@@ -101,7 +118,6 @@ class TestingAgent:
             stdout = res.stdout
             stderr = res.stderr
 
-            # Parse pytest summary: e.g. "5 passed, 1 failed in 0.23s"
             tests_passed = 0
             tests_failed = 0
             tests_run = 0
@@ -120,7 +136,6 @@ class TestingAgent:
 
             tests_run = tests_passed + tests_failed
 
-            # Extract failure errors/tracebacks
             errors = []
             traceback_lines = []
             in_failure_section = False
@@ -134,7 +149,6 @@ class TestingAgent:
 
             status = "passed" if (res.returncode == 0 and tests_failed == 0) else "failed"
             if res.returncode != 0 and tests_run == 0:
-                # Fatal import error or collection error
                 status = "failed"
                 errors.append(f"Pytest collection or runner failure (exit code {res.returncode}): {stderr or stdout}")
 

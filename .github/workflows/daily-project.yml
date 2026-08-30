@@ -65,10 +65,22 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME || github.repository_owner }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME || 'Aastha008' }}
           MAX_DEBUG_ATTEMPTS: 5
         run: |
-          python run.py ${{ inputs.category != '' && format('--category "{0}"', inputs.category) || '' }} ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.mock_llm && '--mock-llm' || '' }}
+          ARGS=""
+          if [ -n "${{ inputs.category }}" ]; then
+            ARGS="$ARGS --category \"${{ inputs.category }}\""
+          fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          if [ "${{ inputs.mock_llm }}" = "true" ]; then
+            ARGS="$ARGS --mock-llm"
+          fi
+
+          echo "Executing: python run.py $ARGS"
+          python run.py $ARGS
 
       - name: Commit and Push Project History
         run: |
