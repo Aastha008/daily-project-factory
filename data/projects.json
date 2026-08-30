@@ -49,6 +49,16 @@
       "github_url": "https://github.com/Aastha008/contextpulse-rag-synthesizer",
       "status": "published",
       "description": "Production-ready semantic RAG context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification."
+    },
+    {
+      "date": "2026-08-30",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "SchemaLoom Migrations",
+      "repository": "schemaloom-migrations",
+      "github_url": "https://github.com/Aastha008/schemaloom-migrations",
+      "status": "published",
+      "description": "An automated database schema drift detection and live migration workbench that inspects SQLite and SQLAlchemy models, calculates structural differences, and provides a real-time web portal to generate and test deterministic rollback migrations."
     }
   ]
 }
