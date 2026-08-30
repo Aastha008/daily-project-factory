@@ -23,16 +23,6 @@
     {
       "date": "2026-08-30",
       "day": "Sunday",
-      "category": "AI",
-      "project_name": "ContextPulse RAG Synthesizer",
-      "repository": "contextpulse-rag-synthesizer",
-      "github_url": "https://github.com/autonomous-coder/contextpulse-rag-synthesizer",
-      "status": "published",
-      "description": "Production-ready semantic RAG context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification."
-    },
-    {
-      "date": "2026-08-30",
-      "day": "Sunday",
       "category": "Full Stack",
       "project_name": "TaskFlow Ops Portal",
       "repository": "taskflow-ops-portal",
@@ -49,6 +39,16 @@
       "github_url": "https://github.com/autonomous-coder/devsecops-config-auditor",
       "status": "published",
       "description": "High-performance CLI utility for auditing YAML/JSON configuration files, identifying CVE misconfigurations, and generating compliance scorecards."
+    },
+    {
+      "date": "2026-08-30",
+      "day": "Sunday",
+      "category": "AI",
+      "project_name": "ContextPulse RAG Synthesizer",
+      "repository": "contextpulse-rag-synthesizer",
+      "github_url": "https://github.com/Aastha008/contextpulse-rag-synthesizer",
+      "status": "published",
+      "description": "Production-ready semantic RAG context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification."
     }
   ]
 }

@@ -32,7 +32,7 @@ class MockLLMProvider(LLMProvider):
             return self._mock_review(prompt)
 
         # 2. Debugger (identified by debugging attempt markers)
-        if "debugging attempt:" in combined or "principal debugger" in combined or "modified_files" in combined:
+        if "debugging attempt:" in combined or "principal debugger" in combined or "modified_files" in combined or "diagnosis" in combined:
             return self._mock_debugger(prompt)
 
         # 3. Architecture (identified by architect prompt markers)
@@ -259,8 +259,8 @@ class MockLLMProvider(LLMProvider):
             "testing_structure": "pytest test suite with isolated fixtures and test cases"
         })
 
-    def _mock_coding(self, prompt: str) -> str:
-        files = {
+    def _get_working_code_files(self) -> Dict[str, str]:
+        return {
             "requirements.txt": "fastapi>=0.110.0\npydantic>=2.7.0\nhttpx>=0.27.0\npytest>=8.0.0\nuvicorn>=0.29.0\n",
             ".env.example": "APP_ENV=development\nPORT=8000\nLOG_LEVEL=INFO\nAPI_KEY=your-secret-key-here\n",
             ".gitignore": "__pycache__/\n*.pyc\n.pytest_cache/\n.env\n*.db\n",
@@ -528,7 +528,9 @@ def test_process_endpoint_empty_query():
     assert "cannot be empty" in response.json()["detail"]
 '''
         }
-        return json.dumps({"files": files})
+
+    def _mock_coding(self, prompt: str) -> str:
+        return json.dumps({"files": self._get_working_code_files()})
 
     def _mock_readme(self, prompt: str) -> str:
         return """# Project Name
@@ -568,11 +570,17 @@ MIT License. Created autonomously by Daily Project Factory.
 """
 
     def _mock_debugger(self, prompt: str) -> str:
+        # Return the verified working files
+        files = self._get_working_code_files()
         return json.dumps({
-            "analysis": "Identified syntax or assertion discrepancy in target file.",
-            "root_cause": "Typo in function return type or test assertion.",
+            "analysis": "Restored full working implementations for all target modules and test cases.",
+            "root_cause": "Re-aligned method signatures and imports.",
             "modified_files": {
-                "src/core.py": '"""Patched core logic."""\n# Verified and repaired\n'
+                "src/models.py": files["src/models.py"],
+                "src/core.py": files["src/core.py"],
+                "src/api.py": files["src/api.py"],
+                "tests/test_core.py": files["tests/test_core.py"],
+                "tests/test_api.py": files["tests/test_api.py"],
             }
         })
 
