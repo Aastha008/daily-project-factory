@@ -40,11 +40,15 @@ class GitHubPublisherAgent:
     ) -> Dict[str, Any]:
         """Create remote repository via GitHub REST API."""
         if not self.github_token:
-            factory_logger.warning("GITHUB_TOKEN not provided. Skipping remote GitHub repository creation.")
+            factory_logger.warning(
+                "PAT_GITHUB_TOKEN not provided. Skipping remote GitHub repository creation.\n"
+                "To enable automatic repository publishing, add PAT_GITHUB_TOKEN in GitHub Repository Secrets."
+            )
             return {
                 "created": False,
                 "url": f"https://github.com/{self.github_username}/{repo_slug}",
                 "clone_url": f"https://github.com/{self.github_username}/{repo_slug}.git",
+                "error": "No token provided",
             }
 
         url = "https://api.github.com/user/repos"
@@ -71,27 +75,41 @@ class GitHubPublisherAgent:
             resp = requests.post(url, headers=headers, json=payload, timeout=20)
             if resp.status_code == 201:
                 data = resp.json()
-                # Set topics if available
                 if topics:
                     clean_topics = [slugify(t) for t in topics if t][:10]
-                    requests.put(
-                        f"https://api.github.com/repos/{data['owner']['login']}/{repo_slug}/topics",
-                        headers=headers,
-                        json={"names": clean_topics},
-                        timeout=10,
-                    )
+                    try:
+                        requests.put(
+                            f"https://api.github.com/repos/{data['owner']['login']}/{repo_slug}/topics",
+                            headers=headers,
+                            json={"names": clean_topics},
+                            timeout=10,
+                        )
+                    except Exception:
+                        pass
                 return {
                     "created": True,
                     "url": data.get("html_url", ""),
                     "clone_url": data.get("clone_url", ""),
                 }
             elif resp.status_code == 422 and "already exists" in resp.text:
-                # Repo already exists, build URL
                 owner = settings.github_organization or self.github_username
                 return {
                     "created": True,
                     "url": f"https://github.com/{owner}/{repo_slug}",
                     "clone_url": f"https://github.com/{owner}/{repo_slug}.git",
+                }
+            elif resp.status_code in [401, 403]:
+                factory_logger.error(
+                    f"GitHub API authentication failed (HTTP {resp.status_code}). "
+                    "The provided token lacks repository creation permissions. "
+                    "Please ensure PAT_GITHUB_TOKEN has the 'repo' scope."
+                )
+                owner = settings.github_organization or self.github_username
+                return {
+                    "created": False,
+                    "url": f"https://github.com/{owner}/{repo_slug}",
+                    "clone_url": f"https://github.com/{owner}/{repo_slug}.git",
+                    "error": resp.text,
                 }
             else:
                 factory_logger.warning(f"GitHub API returned {resp.status_code}: {resp.text}")
@@ -100,6 +118,7 @@ class GitHubPublisherAgent:
                     "created": False,
                     "url": f"https://github.com/{owner}/{repo_slug}",
                     "clone_url": f"https://github.com/{owner}/{repo_slug}.git",
+                    "error": resp.text,
                 }
         except Exception as exc:
             factory_logger.error(f"GitHub repo creation exception: {exc}")
@@ -108,6 +127,7 @@ class GitHubPublisherAgent:
                 "created": False,
                 "url": f"https://github.com/{owner}/{repo_slug}",
                 "clone_url": f"https://github.com/{owner}/{repo_slug}.git",
+                "error": str(exc),
             }
 
     def publish(
@@ -143,6 +163,19 @@ class GitHubPublisherAgent:
 
         # 2. Remote Repo Creation
         remote_info = self.create_github_repo(repo_slug, description, topics)
+        if not remote_info.get("created"):
+            mock_url = remote_info.get("url", f"https://github.com/{self.github_username}/{repo_slug}")
+            factory_logger.warning(
+                "Could not create remote repository on GitHub. "
+                "Ensure PAT_GITHUB_TOKEN has the 'repo' scope in GitHub repository secrets."
+            )
+            return GitHubResult(
+                repository_name=repo_slug,
+                github_url=mock_url,
+                status="skipped",
+                error=remote_info.get("error"),
+            )
+
         clone_url = remote_info.get("clone_url", "")
         repo_url = remote_info.get("url", "")
 
@@ -163,7 +196,7 @@ class GitHubPublisherAgent:
                 status="published",
             )
         else:
-            factory_logger.warning(f"Git push failed: {push_output}. Local repo intact.")
+            factory_logger.warning(f"Git push failed: {push_output}. Local repository is intact.")
             return GitHubResult(
                 repository_name=repo_slug,
                 github_url=repo_url,
