@@ -2,12 +2,12 @@ name: Daily Autonomous Project Factory
 
 on:
   schedule:
-    # Runs everyday at 06:00 UTC (configurable)
+    # Runs everyday at 06:00 UTC
     - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       category:
-        description: 'Override Category (Python, AI, Web Development, Data Analytics, Machine Learning, Automation, Full Stack)'
+        description: 'Override Category'
         required: false
         default: ''
         type: choice
@@ -21,12 +21,12 @@ on:
           - 'Automation'
           - 'Full Stack'
       dry_run:
-        description: 'Run in Dry Run mode (tests everything without publishing to GitHub)'
+        description: 'Run in Dry Run mode (tests locally without publishing)'
         required: false
         default: false
         type: boolean
       mock_llm:
-        description: 'Use Mock LLM Provider (no API key needed)'
+        description: 'Use Mock LLM Provider (offline demo)'
         required: false
         default: false
         type: boolean
@@ -45,7 +45,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -64,25 +63,12 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER || 'gemini' }}
-          MODEL_NAME: ${{ secrets.MODEL_NAME || 'gemini-2.5-flash' }}
+          PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GITHUB_USERNAME: ${{ secrets.GH_USERNAME || github.repository_owner }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME || github.repository_owner }}
           MAX_DEBUG_ATTEMPTS: 5
         run: |
-          ARGS=""
-          if [ -n "${{ inputs.category }}" ]; then
-            ARGS="$ARGS --category \"${{ inputs.category }}\""
-          fi
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            ARGS="$ARGS --dry-run"
-          fi
-          if [ "${{ inputs.mock_llm }}" = "true" ]; then
-            ARGS="$ARGS --mock-llm"
-          fi
-
-          echo "Running Daily Project Factory with args: $ARGS"
-          python run.py $ARGS
+          python run.py ${{ inputs.category != '' && format('--category "{0}"', inputs.category) || '' }} ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.mock_llm && '--mock-llm' || '' }}
 
       - name: Commit and Push Project History
         run: |
@@ -93,5 +79,5 @@ jobs:
             echo "No changes in project history to commit."
           else
             git commit -m "chore(history): update daily projects registry [skip ci]"
-            git push origin main || git push
+            git push origin main || echo "History push skipped"
           fi
