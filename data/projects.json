@@ -59,6 +59,16 @@
       "github_url": "https://github.com/Aastha008/schemaloom-migrations",
       "status": "published",
       "description": "An automated database schema drift detection and live migration workbench that inspects SQLite and SQLAlchemy models, calculates structural differences, and provides a real-time web portal to generate and test deterministic rollback migrations."
+    },
+    {
+      "date": "2026-08-31",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "LogLens AI",
+      "repository": "loglens-ai",
+      "github_url": "https://github.com/Aastha008/loglens-ai",
+      "status": "published",
+      "description": "An intelligent log anomaly detection and root-cause analysis engine that ingests unstructured application logs, parses them into structured Pydantic models using regex-pattern learning, and exposes a high-performance FastAPI/Rich CLI suite to instantly isolate stack traces, recurring system errors, and performance bottlenecks."
     }
   ]
 }
