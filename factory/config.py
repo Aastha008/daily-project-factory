@@ -84,6 +84,11 @@ class Settings(BaseModel):
     github_username: Optional[str] = Field(
         default_factory=lambda: _clean_env("GH_USERNAME") or _clean_env("GITHUB_USERNAME", "Aastha008")
     )
+    github_email: Optional[str] = Field(
+        default_factory=lambda: _clean_env("GH_EMAIL")
+        or _clean_env("GITHUB_EMAIL")
+        or f"{_clean_env('GH_USERNAME') or _clean_env('GITHUB_USERNAME') or 'Aastha008'}@users.noreply.github.com"
+    )
     github_organization: Optional[str] = Field(default_factory=lambda: _clean_env("GITHUB_ORGANIZATION"))
     github_default_visibility: str = Field(default_factory=lambda: _clean_env("GITHUB_DEFAULT_VISIBILITY", "public"))
 

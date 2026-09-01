@@ -2,7 +2,7 @@ name: Daily Autonomous Project Factory
 
 on:
   schedule:
-    # Runs everyday at 06:00 UTC
+    # Runs everyday at 06:00 UTC (11:30 AM IST)
     - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
@@ -65,7 +65,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PAT_GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-          GH_USERNAME: ${{ secrets.GH_USERNAME || 'Aastha008' }}
+          GH_USERNAME: ${{ secrets.GH_USERNAME || github.repository_owner }}
+          GH_EMAIL: ${{ secrets.GH_EMAIL || format('{0}@users.noreply.github.com', secrets.GH_USERNAME || github.repository_owner) }}
           MAX_DEBUG_ATTEMPTS: 5
         run: |
           ARGS=""
@@ -84,8 +85,8 @@ jobs:
 
       - name: Commit and Push Project History
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "${{ secrets.GH_USERNAME || github.repository_owner }}"
+          git config --global user.email "${{ secrets.GH_EMAIL || format('{0}@users.noreply.github.com', secrets.GH_USERNAME || github.repository_owner) }}"
           git add data/projects.json
           if git diff --staged --quiet; then
             echo "No changes in project history to commit."

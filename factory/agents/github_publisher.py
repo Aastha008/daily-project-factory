@@ -24,11 +24,13 @@ class GitHubPublisherAgent:
         self,
         github_token: Optional[str] = None,
         github_username: Optional[str] = None,
+        github_email: Optional[str] = None,
         dry_run: bool = False,
         skip_github: bool = False,
     ):
-        self.github_token = github_token or settings.github_token
-        self.github_username = github_username or settings.github_username
+        self.github_token = (github_token or settings.github_token or "").strip() or None
+        self.github_username = (github_username or settings.github_username or "Aastha008").strip()
+        self.github_email = (github_email or settings.github_email or f"{self.github_username}@users.noreply.github.com").strip()
         self.dry_run = dry_run or settings.dry_run
         self.skip_github = skip_github or settings.skip_github
 
@@ -137,18 +139,30 @@ class GitHubPublisherAgent:
         repo_slug: str,
         description: str,
         topics: Optional[List[str]] = None,
+        files: Optional[Dict[str, str]] = None,
     ) -> GitHubResult:
         """Initialize git repo, commit, create remote, and push."""
         factory_logger.step("Creating GitHub repository")
 
-        # 1. Local Git Init & Commit
-        commit_msg = f"feat: initial implementation of {project_name}"
-        GitTool.init_and_commit(
-            repo_path=project_dir,
-            commit_message=commit_msg,
-            author_name="Daily Project Factory Bot",
-            author_email="bot@dailyprojectfactory.internal",
-        )
+        # 1. Local Git Init & Multi-stage Commits attributed to user
+        author_name = self.github_username or "Aastha008"
+        author_email = self.github_email or f"{author_name}@users.noreply.github.com"
+
+        if files:
+            GitTool.init_and_commit_staged(
+                repo_path=project_dir,
+                author_name=author_name,
+                author_email=author_email,
+                files=files,
+            )
+        else:
+            commit_msg = f"feat: initial implementation of {project_name}"
+            GitTool.init_and_commit(
+                repo_path=project_dir,
+                commit_message=commit_msg,
+                author_name=author_name,
+                author_email=author_email,
+            )
 
         if self.dry_run or self.skip_github or not self.github_token:
             mock_url = f"https://github.com/{self.github_username}/{repo_slug}"
@@ -212,8 +226,12 @@ class GitHubPublisherAgent:
         description = idea.get("description", "")
         topics = idea.get("technologies", [])
         project_dir = Path(state.get("project_dir", str(settings.generated_projects_dir / slug)))
+        files = state.get("files") or {}
+        readme = state.get("readme", "")
+        if readme:
+            files["README.md"] = readme
 
-        res = self.publish(project_dir, project_name, slug, description, topics)
+        res = self.publish(project_dir, project_name, slug, description, topics, files)
         state["github_info"] = res.model_dump()
         state["project_status"] = res.status
         state["logs"].append(f"GitHub publishing finished with status: {res.status}")
