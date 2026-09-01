@@ -69,6 +69,16 @@
       "github_url": "https://github.com/Aastha008/loglens-ai",
       "status": "published",
       "description": "An intelligent log anomaly detection and root-cause analysis engine that ingests unstructured application logs, parses them into structured Pydantic models using regex-pattern learning, and exposes a high-performance FastAPI/Rich CLI suite to instantly isolate stack traces, recurring system errors, and performance bottlenecks."
+    },
+    {
+      "date": "2026-09-01",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "PromptProxy Sentinel",
+      "repository": "promptproxy-sentinel",
+      "github_url": "https://github.com/Aastha008/promptproxy-sentinel",
+      "status": "published",
+      "description": "A production-ready LLM proxy gateway and safety orchestrator that enforces security guardrails, semantic prompt caching, and structured output validation. It intercepts LLM API calls to sanitize PII, block prompt injections, serve instant cached responses for semantically equivalent queries, and guarantee schema compliance."
     }
   ]
 }
