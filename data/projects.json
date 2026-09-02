@@ -79,6 +79,16 @@
       "github_url": "https://github.com/Aastha008/promptproxy-sentinel",
       "status": "published",
       "description": "A production-ready LLM proxy gateway and safety orchestrator that enforces security guardrails, semantic prompt caching, and structured output validation. It intercepts LLM API calls to sanitize PII, block prompt injections, serve instant cached responses for semantically equivalent queries, and guarantee schema compliance."
+    },
+    {
+      "date": "2026-09-02",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "HookPulse Relay",
+      "repository": "hookpulse-relay",
+      "github_url": "https://github.com/Aastha008/hookpulse-relay",
+      "status": "published",
+      "description": "A high-performance webhook orchestration platform and developer portal that ingests, verifies, transforms, and reliably dispatches third-party event streams. It pairs an asynchronous FastAPI backend with a real-time React/TypeScript control plane to provide deep traffic inspection, custom payload reshaping, and resilient delivery retry mechanisms."
     }
   ]
 }
