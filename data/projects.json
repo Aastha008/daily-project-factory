@@ -89,6 +89,16 @@
       "github_url": "https://github.com/Aastha008/hookpulse-relay",
       "status": "published",
       "description": "A high-performance webhook orchestration platform and developer portal that ingests, verifies, transforms, and reliably dispatches third-party event streams. It pairs an asynchronous FastAPI backend with a real-time React/TypeScript control plane to provide deep traffic inspection, custom payload reshaping, and resilient delivery retry mechanisms."
+    },
+    {
+      "date": "2026-09-03",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "DuckDrift Profiler",
+      "repository": "duckdrift-profiler",
+      "github_url": "https://github.com/Aastha008/duckdrift-profiler",
+      "status": "published",
+      "description": "An embedded, DuckDB-powered dataset profiling and automated statistical drift detection engine. It ingests Parquet, CSV, and JSON data streams to compute distribution shifts, enforce schema contracts, and render interactive exploratory dashboards."
     }
   ]
 }
