@@ -99,6 +99,16 @@
       "github_url": "https://github.com/Aastha008/duckdrift-profiler",
       "status": "published",
       "description": "An embedded, DuckDB-powered dataset profiling and automated statistical drift detection engine. It ingests Parquet, CSV, and JSON data streams to compute distribution shifts, enforce schema contracts, and render interactive exploratory dashboards."
+    },
+    {
+      "date": "2026-09-04",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "DriftShield ML",
+      "repository": "driftshield-ml",
+      "github_url": "https://github.com/Aastha008/driftshield-ml",
+      "status": "published",
+      "description": "A production-grade ML inference monitoring and concept drift isolation engine. It intercepts live Scikit-Learn model prediction payloads, calculates statistical feature drift against baseline training distributions, and provides dynamic fallback model routing with diagnostic attributions via FastAPI and CLI interfaces."
     }
   ]
 }
