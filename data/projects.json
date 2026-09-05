@@ -109,6 +109,16 @@
       "github_url": "https://github.com/Aastha008/driftshield-ml",
       "status": "published",
       "description": "A production-grade ML inference monitoring and concept drift isolation engine. It intercepts live Scikit-Learn model prediction payloads, calculates statistical feature drift against baseline training distributions, and provides dynamic fallback model routing with diagnostic attributions via FastAPI and CLI interfaces."
+    },
+    {
+      "date": "2026-09-05",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "ReleaseRelay Engine",
+      "repository": "releaserelay-engine",
+      "github_url": "https://github.com/Aastha008/releaserelay-engine",
+      "status": "published",
+      "description": "An automated upstream dependency release monitoring and breaking-change impact engine. It continuously polls and scrapes package registries, GitHub releases, and documentation feeds to detect version updates, parse breaking-change notes, and evaluate impact against local project manifests."
     }
   ]
 }
