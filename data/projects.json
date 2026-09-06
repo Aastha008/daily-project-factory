@@ -119,6 +119,16 @@
       "github_url": "https://github.com/Aastha008/releaserelay-engine",
       "status": "published",
       "description": "An automated upstream dependency release monitoring and breaking-change impact engine. It continuously polls and scrapes package registries, GitHub releases, and documentation feeds to detect version updates, parse breaking-change notes, and evaluate impact against local project manifests."
+    },
+    {
+      "date": "2026-09-06",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "QueueForge Ops",
+      "repository": "queueforge-ops",
+      "github_url": "https://github.com/Aastha008/queueforge-ops",
+      "status": "published",
+      "description": "A full-stack asynchronous queue observability and dead-letter queue (DLQ) triage platform that intercepts, visualizes, and safely replays failed background tasks. It combines a FastAPI REST backend and SQLite/SQLAlchemy data store with an interactive web workbench to perform raw payload mutation, stack-trace root cause tagging, and rate-limited replay execution."
     }
   ]
 }
