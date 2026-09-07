@@ -129,6 +129,16 @@
       "github_url": "https://github.com/Aastha008/queueforge-ops",
       "status": "published",
       "description": "A full-stack asynchronous queue observability and dead-letter queue (DLQ) triage platform that intercepts, visualizes, and safely replays failed background tasks. It combines a FastAPI REST backend and SQLite/SQLAlchemy data store with an interactive web workbench to perform raw payload mutation, stack-trace root cause tagging, and rate-limited replay execution."
+    },
+    {
+      "date": "2026-09-07",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "QueryRoute Optimizer",
+      "repository": "queryroute-optimizer",
+      "github_url": "https://github.com/Aastha008/queryroute-optimizer",
+      "status": "published",
+      "description": "An automated SQL query execution planner and regression testing utility that intercepts application database queries, analyzes query execution plans via EXPLAIN, and detects performance regressions or missing index opportunities against a local SQLite baseline."
     }
   ]
 }
