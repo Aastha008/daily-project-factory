@@ -139,6 +139,16 @@
       "github_url": "https://github.com/Aastha008/queryroute-optimizer",
       "status": "published",
       "description": "An automated SQL query execution planner and regression testing utility that intercepts application database queries, analyzes query execution plans via EXPLAIN, and detects performance regressions or missing index opportunities against a local SQLite baseline."
+    },
+    {
+      "date": "2026-09-08",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "ToolForge Runtime",
+      "repository": "toolforge-runtime",
+      "github_url": "https://github.com/Aastha008/toolforge-runtime",
+      "status": "published",
+      "description": "ToolForge Runtime is an agentic middleware and execution sandboxing engine that validates, dry-runs, and safely executes LLM tool calls. It intercepts structured tool invocation requests, validates inputs against dynamically compiled Pydantic schemas, evaluates execution safety policies, and automatically triggers fallback tool chains when APIs fail or return malformed outputs."
     }
   ]
 }
