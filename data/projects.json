@@ -149,6 +149,16 @@
       "github_url": "https://github.com/Aastha008/toolforge-runtime",
       "status": "published",
       "description": "ToolForge Runtime is an agentic middleware and execution sandboxing engine that validates, dry-runs, and safely executes LLM tool calls. It intercepts structured tool invocation requests, validates inputs against dynamically compiled Pydantic schemas, evaluates execution safety policies, and automatically triggers fallback tool chains when APIs fail or return malformed outputs."
+    },
+    {
+      "date": "2026-09-09",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Resonator API",
+      "repository": "resonator-api",
+      "github_url": "https://github.com/Aastha008/resonator-api",
+      "status": "published",
+      "description": "An automated API contract evolution and backward-compatibility governance suite that inspects OpenAPI specifications, tracks breaking schema mutations across git branches, and provides an interactive web dashboard for real-time diff analysis. It ensures seamless microservice versioning by generating automated regression tests and compatibility matrices before deployment."
     }
   ]
 }
