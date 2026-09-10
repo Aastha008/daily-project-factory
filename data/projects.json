@@ -159,6 +159,16 @@
       "github_url": "https://github.com/Aastha008/resonator-api",
       "status": "published",
       "description": "An automated API contract evolution and backward-compatibility governance suite that inspects OpenAPI specifications, tracks breaking schema mutations across git branches, and provides an interactive web dashboard for real-time diff analysis. It ensures seamless microservice versioning by generating automated regression tests and compatibility matrices before deployment."
+    },
+    {
+      "date": "2026-09-10",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "ConstraintFlow Analytics",
+      "repository": "constraintflow-analytics",
+      "github_url": "https://github.com/Aastha008/constraintflow-analytics",
+      "status": "published",
+      "description": "A declarative data cleaning and quality orchestration engine that transforms raw datasets into audit-ready assets using YAML-defined constraint policies. It automatically applies remediation logic, computes statistical impact scores, and generates a detailed mutation manifest to ensure reproducibility in high-stakes analytics."
     }
   ]
 }
