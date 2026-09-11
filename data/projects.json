@@ -169,6 +169,16 @@
       "github_url": "https://github.com/Aastha008/constraintflow-analytics",
       "status": "published",
       "description": "A declarative data cleaning and quality orchestration engine that transforms raw datasets into audit-ready assets using YAML-defined constraint policies. It automatically applies remediation logic, computes statistical impact scores, and generates a detailed mutation manifest to ensure reproducibility in high-stakes analytics."
+    },
+    {
+      "date": "2026-09-11",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "ClusterBandit ML",
+      "repository": "clusterbandit-ml",
+      "github_url": "https://github.com/Aastha008/clusterbandit-ml",
+      "status": "published",
+      "description": "An adaptive contextual recommendation engine that combines unsupervised feature clustering with contextual multi-armed bandits to deliver personalized content, pricing tiers, or API action routing in real time. It continuously ingests high-dimensional user interaction payloads, groups context vectors into dynamic micro-segments, and optimizes online conversion rates with automatic cold-start handling and delayed reward feedback loops."
     }
   ]
 }
