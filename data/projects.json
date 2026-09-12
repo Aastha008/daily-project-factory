@@ -179,6 +179,16 @@
       "github_url": "https://github.com/Aastha008/clusterbandit-ml",
       "status": "published",
       "description": "An adaptive contextual recommendation engine that combines unsupervised feature clustering with contextual multi-armed bandits to deliver personalized content, pricing tiers, or API action routing in real time. It continuously ingests high-dimensional user interaction payloads, groups context vectors into dynamic micro-segments, and optimizes online conversion rates with automatic cold-start handling and delayed reward feedback loops."
+    },
+    {
+      "date": "2026-09-12",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "SelectorShift Ops",
+      "repository": "selectorshift-ops",
+      "github_url": "https://github.com/Aastha008/selectorshift-ops",
+      "status": "published",
+      "description": "An automated, self-healing web scraping and workflow extraction engine that monitors target web pages, detects DOM structure mutations, and dynamically repairs broken selectors using semantic node-matching heuristics. It combines scheduled job execution, resilient DOM parsing, structural Pydantic data validation, and an interactive Rich CLI to maintain uninterrupted web data pipelines."
     }
   ]
 }
