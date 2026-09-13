@@ -189,6 +189,16 @@
       "github_url": "https://github.com/Aastha008/selectorshift-ops",
       "status": "published",
       "description": "An automated, self-healing web scraping and workflow extraction engine that monitors target web pages, detects DOM structure mutations, and dynamically repairs broken selectors using semantic node-matching heuristics. It combines scheduled job execution, resilient DOM parsing, structural Pydantic data validation, and an interactive Rich CLI to maintain uninterrupted web data pipelines."
+    },
+    {
+      "date": "2026-09-13",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "ShadowMesh Ops",
+      "repository": "shadowmesh-ops",
+      "github_url": "https://github.com/Aastha008/shadowmesh-ops",
+      "status": "published",
+      "description": "ShadowMesh Ops is a full-stack reverse proxy, traffic shadowing, and canary release governance platform. It non-intrusively intercepts live HTTP requests, duplicates sanitized user payloads to secondary canary microservices in real-time, and computes structural response divergence, latency drift, and error rates. The platform includes an interactive web dashboard for configuring dynamic traffic routing, inspecting live payload diffs, and triggering automated circuit-breaking rollbacks."
     }
   ]
 }
