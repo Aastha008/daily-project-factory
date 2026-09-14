@@ -81,134 +81,14 @@
       "description": "A production-ready LLM proxy gateway and safety orchestrator that enforces security guardrails, semantic prompt caching, and structured output validation. It intercepts LLM API calls to sanitize PII, block prompt injections, serve instant cached responses for semantically equivalent queries, and guarantee schema compliance."
     },
     {
-      "date": "2026-09-02",
-      "day": "Wednesday",
-      "category": "Web Development",
-      "project_name": "HookPulse Relay",
-      "repository": "hookpulse-relay",
-      "github_url": "https://github.com/Aastha008/hookpulse-relay",
-      "status": "published",
-      "description": "A high-performance webhook orchestration platform and developer portal that ingests, verifies, transforms, and reliably dispatches third-party event streams. It pairs an asynchronous FastAPI backend with a real-time React/TypeScript control plane to provide deep traffic inspection, custom payload reshaping, and resilient delivery retry mechanisms."
-    },
-    {
-      "date": "2026-09-03",
-      "day": "Thursday",
-      "category": "Data Analytics",
-      "project_name": "DuckDrift Profiler",
-      "repository": "duckdrift-profiler",
-      "github_url": "https://github.com/Aastha008/duckdrift-profiler",
-      "status": "published",
-      "description": "An embedded, DuckDB-powered dataset profiling and automated statistical drift detection engine. It ingests Parquet, CSV, and JSON data streams to compute distribution shifts, enforce schema contracts, and render interactive exploratory dashboards."
-    },
-    {
-      "date": "2026-09-04",
-      "day": "Friday",
-      "category": "Machine Learning",
-      "project_name": "DriftShield ML",
-      "repository": "driftshield-ml",
-      "github_url": "https://github.com/Aastha008/driftshield-ml",
-      "status": "published",
-      "description": "A production-grade ML inference monitoring and concept drift isolation engine. It intercepts live Scikit-Learn model prediction payloads, calculates statistical feature drift against baseline training distributions, and provides dynamic fallback model routing with diagnostic attributions via FastAPI and CLI interfaces."
-    },
-    {
-      "date": "2026-09-05",
-      "day": "Saturday",
-      "category": "Automation",
-      "project_name": "ReleaseRelay Engine",
-      "repository": "releaserelay-engine",
-      "github_url": "https://github.com/Aastha008/releaserelay-engine",
-      "status": "published",
-      "description": "An automated upstream dependency release monitoring and breaking-change impact engine. It continuously polls and scrapes package registries, GitHub releases, and documentation feeds to detect version updates, parse breaking-change notes, and evaluate impact against local project manifests."
-    },
-    {
-      "date": "2026-09-06",
-      "day": "Sunday",
-      "category": "Full Stack",
-      "project_name": "QueueForge Ops",
-      "repository": "queueforge-ops",
-      "github_url": "https://github.com/Aastha008/queueforge-ops",
-      "status": "published",
-      "description": "A full-stack asynchronous queue observability and dead-letter queue (DLQ) triage platform that intercepts, visualizes, and safely replays failed background tasks. It combines a FastAPI REST backend and SQLite/SQLAlchemy data store with an interactive web workbench to perform raw payload mutation, stack-trace root cause tagging, and rate-limited replay execution."
-    },
-    {
-      "date": "2026-09-07",
-      "day": "Monday",
-      "category": "Python",
-      "project_name": "QueryRoute Optimizer",
-      "repository": "queryroute-optimizer",
-      "github_url": "https://github.com/Aastha008/queryroute-optimizer",
-      "status": "published",
-      "description": "An automated SQL query execution planner and regression testing utility that intercepts application database queries, analyzes query execution plans via EXPLAIN, and detects performance regressions or missing index opportunities against a local SQLite baseline."
-    },
-    {
-      "date": "2026-09-08",
-      "day": "Tuesday",
-      "category": "AI",
-      "project_name": "ToolForge Runtime",
-      "repository": "toolforge-runtime",
-      "github_url": "https://github.com/Aastha008/toolforge-runtime",
-      "status": "published",
-      "description": "ToolForge Runtime is an agentic middleware and execution sandboxing engine that validates, dry-runs, and safely executes LLM tool calls. It intercepts structured tool invocation requests, validates inputs against dynamically compiled Pydantic schemas, evaluates execution safety policies, and automatically triggers fallback tool chains when APIs fail or return malformed outputs."
-    },
-    {
-      "date": "2026-09-09",
-      "day": "Wednesday",
-      "category": "Web Development",
-      "project_name": "Resonator API",
-      "repository": "resonator-api",
-      "github_url": "https://github.com/Aastha008/resonator-api",
-      "status": "published",
-      "description": "An automated API contract evolution and backward-compatibility governance suite that inspects OpenAPI specifications, tracks breaking schema mutations across git branches, and provides an interactive web dashboard for real-time diff analysis. It ensures seamless microservice versioning by generating automated regression tests and compatibility matrices before deployment."
-    },
-    {
-      "date": "2026-09-10",
-      "day": "Thursday",
-      "category": "Data Analytics",
-      "project_name": "ConstraintFlow Analytics",
-      "repository": "constraintflow-analytics",
-      "github_url": "https://github.com/Aastha008/constraintflow-analytics",
-      "status": "published",
-      "description": "A declarative data cleaning and quality orchestration engine that transforms raw datasets into audit-ready assets using YAML-defined constraint policies. It automatically applies remediation logic, computes statistical impact scores, and generates a detailed mutation manifest to ensure reproducibility in high-stakes analytics."
-    },
-    {
-      "date": "2026-09-11",
-      "day": "Friday",
-      "category": "Machine Learning",
-      "project_name": "ClusterBandit ML",
-      "repository": "clusterbandit-ml",
-      "github_url": "https://github.com/Aastha008/clusterbandit-ml",
-      "status": "published",
-      "description": "An adaptive contextual recommendation engine that combines unsupervised feature clustering with contextual multi-armed bandits to deliver personalized content, pricing tiers, or API action routing in real time. It continuously ingests high-dimensional user interaction payloads, groups context vectors into dynamic micro-segments, and optimizes online conversion rates with automatic cold-start handling and delayed reward feedback loops."
-    },
-    {
-      "date": "2026-09-12",
-      "day": "Saturday",
-      "category": "Automation",
-      "project_name": "SelectorShift Ops",
-      "repository": "selectorshift-ops",
-      "github_url": "https://github.com/Aastha008/selectorshift-ops",
-      "status": "published",
-      "description": "An automated, self-healing web scraping and workflow extraction engine that monitors target web pages, detects DOM structure mutations, and dynamically repairs broken selectors using semantic node-matching heuristics. It combines scheduled job execution, resilient DOM parsing, structural Pydantic data validation, and an interactive Rich CLI to maintain uninterrupted web data pipelines."
-    },
-    {
-      "date": "2026-09-13",
-      "day": "Sunday",
-      "category": "Full Stack",
-      "project_name": "ShadowMesh Ops",
-      "repository": "shadowmesh-ops",
-      "github_url": "https://github.com/Aastha008/shadowmesh-ops",
-      "status": "published",
-      "description": "ShadowMesh Ops is a full-stack reverse proxy, traffic shadowing, and canary release governance platform. It non-intrusively intercepts live HTTP requests, duplicates sanitized user payloads to secondary canary microservices in real-time, and computes structural response divergence, latency drift, and error rates. The platform includes an interactive web dashboard for configuring dynamic traffic routing, inspecting live payload diffs, and triggering automated circuit-breaking rollbacks."
-    },
-    {
       "date": "2026-09-14",
       "day": "Monday",
-      "category": "Python",
-      "project_name": "SchemaHazard Engine",
-      "repository": "schemahazard-engine",
-      "github_url": "https://github.com/Aastha008/schemahazard-engine",
+      "category": "AI",
+      "project_name": "PDF Chat",
+      "repository": "pdf-chat",
+      "github_url": "https://github.com/Aastha008/pdf-chat",
       "status": "published",
-      "description": "An automated zero-downtime database migration hazard analyzer and lock risk evaluation engine. It statically parses raw SQL and ORM migration scripts, models DDL table rewrite hazards and lock severity levels, tests backward compatibility against active query workloads, and provides actionable remediation blueprints before deployment."
+      "description": "Production-ready semantic document context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification."
     }
   ]
 }

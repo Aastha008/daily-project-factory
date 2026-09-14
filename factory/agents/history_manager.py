@@ -9,7 +9,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 from factory.config import settings
 from factory.state import ProjectState
 from factory.utils.logger import factory_logger
@@ -38,6 +38,16 @@ class HistoryManagerAgent:
         except Exception as exc:
             factory_logger.warning(f"Could not load history ledger: {exc}. Starting fresh.")
             return []
+
+    def get_existing_slugs(self) -> Set[str]:
+        """Return the set of all past repository slugs in the history ledger."""
+        history = self.load_history()
+        slugs = set()
+        for p in history:
+            repo = p.get("repository")
+            if repo:
+                slugs.add(repo.lower().strip())
+        return slugs
 
     def save_project(
         self,
@@ -79,7 +89,13 @@ class HistoryManagerAgent:
         stopwords = {"the", "and", "for", "with", "from", "that", "this", "app", "project", "tool"}
         return {t for t in tokens if t not in stopwords}
 
-    def check_uniqueness(self, project_name: str, description: str, threshold: float = 0.55) -> Tuple[bool, str]:
+    def check_uniqueness(
+        self,
+        project_name: str,
+        description: str,
+        repository_slug: Optional[str] = None,
+        threshold: float = 0.55,
+    ) -> Tuple[bool, str]:
         """
         Check if the proposed project idea is too similar to any previously built project.
         Returns (is_unique, reason).
@@ -92,11 +108,16 @@ class HistoryManagerAgent:
 
         for past in history:
             past_name = past.get("project_name", "")
+            past_repo = past.get("repository", "")
             past_desc = past.get("description", "")
 
             # Exact name match
             if project_name.lower().strip() == past_name.lower().strip():
                 return False, f"Exact project name match with past project from {past.get('date')}: '{past_name}'"
+
+            # Exact repository slug match
+            if repository_slug and past_repo and repository_slug.lower().strip() == past_repo.lower().strip():
+                return False, f"Exact repository slug duplicate with past project from {past.get('date')}: '{past_repo}'"
 
             # Jaccard token similarity
             past_tokens = self.tokenize(f"{past_name} {past_desc}")
@@ -124,7 +145,7 @@ class HistoryManagerAgent:
                 day=state.get("day", ""),
                 category=state.get("category", ""),
                 project_name=idea.get("project_name", "Untitled Project"),
-                repository=github_info.get("repository_name", "untitled-project"),
+                repository=github_info.get("repository_name", idea.get("repository_slug", "untitled-project")),
                 github_url=github_info.get("github_url", "https://github.com"),
                 description=idea.get("description", ""),
                 status=status,

@@ -71,7 +71,8 @@ class MockLLMProvider(LLMProvider):
 
         idea_catalog = {
             "Python": {
-                "project_name": "DevSecOps Config Auditor",
+                "project_name": "Config Auditor",
+                "repository_slug": "config-auditor",
                 "category": "Python",
                 "description": "High-performance CLI utility for auditing YAML/JSON configuration files, identifying CVE misconfigurations, and generating compliance scorecards.",
                 "problem_statement": "Developers often deploy Kubernetes, Docker, and CI/CD manifests with insecure default privileges and exposed ports.",
@@ -89,11 +90,12 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "Typer", "Pydantic", "PyYAML", "Rich", "pytest"]
             },
             "AI": {
-                "project_name": "ContextPulse RAG Synthesizer",
+                "project_name": "PDF Chat",
+                "repository_slug": "pdf-chat",
                 "category": "AI",
-                "description": "Production-ready semantic RAG context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification.",
-                "problem_statement": "LLM applications suffer from hallucinations and lost context when ingesting large unstructured documentation sets without intelligent chunking and attribution.",
-                "target_users": ["AI Engineers", "Enterprise Knowledge Workers", "Support Teams"],
+                "description": "Production-ready semantic document context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification.",
+                "problem_statement": "Applications suffer from hallucinations and lost context when ingesting large unstructured documentation sets without intelligent chunking and attribution.",
+                "target_users": ["Software Engineers", "Knowledge Workers", "Support Teams"],
                 "features": [
                     "Adaptive sliding-window text chunker with overlap and metadata indexing",
                     "TF-IDF and cosine similarity hybrid retrieval scoring engine",
@@ -107,7 +109,8 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "FastAPI", "Pydantic", "NumPy", "Scikit-Learn", "pytest"]
             },
             "Web Development": {
-                "project_name": "MetricsForge API Gateway",
+                "project_name": "API Gateway",
+                "repository_slug": "api-gateway",
                 "category": "Web Development",
                 "description": "Lightweight asynchronous reverse proxy and API telemetry gateway with rate limiting, response caching, and health dashboards.",
                 "problem_statement": "Microservices require unified observability and rate limiting without heavy enterprise infrastructure overhead.",
@@ -125,7 +128,8 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "FastAPI", "Uvicorn", "Pydantic", "Httpx", "pytest"]
             },
             "Data Analytics": {
-                "project_name": "DataPulse Anomaly Radar",
+                "project_name": "Anomaly Detector",
+                "repository_slug": "anomaly-detector",
                 "category": "Data Analytics",
                 "description": "Time-series statistical anomaly detection and automated EDA dashboard with Z-score outlier flagging and seasonal trend decomposition.",
                 "problem_statement": "Business analysts lack automated tools to spot metric drift and transaction spikes before they cause revenue loss.",
@@ -143,7 +147,8 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "Pandas", "NumPy", "Scipy", "Rich", "pytest"]
             },
             "Machine Learning": {
-                "project_name": "PropensityPulse ML Engine",
+                "project_name": "Churn Predictor",
+                "repository_slug": "churn-predictor",
                 "category": "Machine Learning",
                 "description": "Customer conversion propensity and churn prediction pipeline with automated feature engineering, cross-validation, and model serving.",
                 "problem_statement": "E-commerce platforms need actionable lead scoring without complex multi-month ML engineering deployments.",
@@ -161,7 +166,8 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "Scikit-Learn", "Pandas", "NumPy", "FastAPI", "pytest"]
             },
             "Automation": {
-                "project_name": "SentinelHook Webhook Dispatcher",
+                "project_name": "Webhook Forwarder",
+                "repository_slug": "webhook-forwarder",
                 "category": "Automation",
                 "description": "Fault-tolerant webhook ingestion, deduplication, and exponential backoff retry dispatcher with dead-letter queue management.",
                 "problem_statement": "Third-party webhook deliveries frequently fail due to intermittent endpoint downtime and lack of automated replay mechanisms.",
@@ -179,7 +185,8 @@ class MockLLMProvider(LLMProvider):
                 "technologies": ["Python", "FastAPI", "SQLite", "Requests", "Pydantic", "pytest"]
             },
             "Full Stack": {
-                "project_name": "TaskFlow Ops Portal",
+                "project_name": "Incident Tracker",
+                "repository_slug": "incident-tracker",
                 "category": "Full Stack",
                 "description": "End-to-end incident management and task orchestration portal featuring FastAPI REST backend, SQLite persistence, and responsive interactive web UI.",
                 "problem_statement": "Engineering teams require a lightweight, self-hosted operational board to manage incident response workflows and shift handovers.",

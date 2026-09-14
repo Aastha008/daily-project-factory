@@ -15,6 +15,11 @@ from factory.config import settings
 from factory.state import GitHubResult, ProjectState
 from factory.utils.git_tools import GitTool
 from factory.utils.logger import factory_logger
+from factory.utils.naming import (
+    derive_name_from_functionality,
+    is_valid_repo_slug,
+    slug_to_title,
+)
 
 
 class GitHubPublisherAgent:
@@ -224,6 +229,23 @@ class GitHubPublisherAgent:
         project_name = idea.get("project_name", "Autonomous Project")
         slug = idea.get("repository_slug") or slugify(project_name)
         description = idea.get("description", "")
+        category = state.get("category", "")
+
+        # Quality check: Validate repository slug meets human-friendly standards
+        is_valid, reason = is_valid_repo_slug(slug)
+        if not is_valid:
+            clean_title, clean_slug = derive_name_from_functionality(
+                project_name=slug or project_name,
+                description=description,
+                category=category,
+            )
+            factory_logger.info(f"Sanitizing repository slug from '{slug}' to '{clean_slug}' ({reason})")
+            slug = clean_slug
+            project_name = clean_title
+            if "idea" in state and isinstance(state["idea"], dict):
+                state["idea"]["repository_slug"] = slug
+                state["idea"]["project_name"] = project_name
+
         topics = idea.get("technologies", [])
         project_dir = Path(state.get("project_dir", str(settings.generated_projects_dir / slug)))
         files = state.get("files") or {}
