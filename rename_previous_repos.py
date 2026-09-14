@@ -71,7 +71,7 @@ RENAME_MAPPING = {
         "new_name": "traffic-shadow-proxy",
         "title": "Traffic Shadow Proxy",
     },
-    # Also include any past records in data/projects.json
+    # Also include past records in data/projects.json
     "contextpulse-rag-synthesizer": {
         "new_name": "document-search",
         "title": "Document Search",
@@ -124,16 +124,24 @@ def update_projects_json(projects_file: Path) -> int:
 
 def rename_github_repositories(username: str, token: str) -> None:
     """Call GitHub REST API to rename remote repositories."""
+    clean_token = "".join(token.strip().split())
+    clean_username = username.strip()
+
     headers = {
-        "Authorization": f"Bearer {token}",
+        "Authorization": f"Bearer {clean_token}",
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "DailyProjectFactory-Renamer",
     }
 
-    # Fetch user's actual repositories to confirm existence
-    print(f"Checking existing repositories for user '{username}' on GitHub...")
-    url = f"https://api.github.com/users/{username}/repos?per_page=100"
-    resp = requests.get(url, headers=headers)
+    print(f"Checking existing repositories for user '{clean_username}' on GitHub...")
+    url = f"https://api.github.com/users/{clean_username}/repos?per_page=100"
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+    except Exception as exc:
+        print(f"Failed to connect to GitHub API: {exc}")
+        return
+
     if resp.status_code != 200:
         print(f"Error fetching user repositories: HTTP {resp.status_code} - {resp.text}")
         return
@@ -147,20 +155,21 @@ def rename_github_repositories(username: str, token: str) -> None:
 
         if old_name in existing_repos:
             print(f"\nRenaming GitHub repository: '{old_name}' -> '{new_name}'...")
-            patch_url = f"https://api.github.com/repos/{username}/{old_name}"
+            patch_url = f"https://api.github.com/repos/{clean_username}/{old_name}"
             payload = {"name": new_name}
-            patch_resp = requests.patch(patch_url, headers=headers, json=payload)
-
-            if patch_resp.status_code == 200:
-                print(f"SUCCESS: Renamed to https://github.com/{username}/{new_name}")
-                renamed_count += 1
-            else:
-                print(f"FAILED (HTTP {patch_resp.status_code}): {patch_resp.text}")
+            try:
+                patch_resp = requests.patch(patch_url, headers=headers, json=payload, timeout=20)
+                if patch_resp.status_code == 200:
+                    print(f"SUCCESS: Renamed to https://github.com/{clean_username}/{new_name}")
+                    renamed_count += 1
+                else:
+                    print(f"FAILED (HTTP {patch_resp.status_code}): {patch_resp.text}")
+            except Exception as e:
+                print(f"Request error while renaming '{old_name}': {e}")
             time.sleep(1)  # Rate pacing
         elif new_name in existing_repos:
             print(f"Repository already named '{new_name}'. Skipping.")
         else:
-            # Not found on remote GitHub account (might be local or mock record)
             pass
 
     print(f"\nFinished GitHub renaming. {renamed_count} repositories renamed successfully.")
@@ -174,15 +183,17 @@ def main():
     update_projects_json(projects_file)
 
     # 2. Rename on GitHub if credentials available
-    token = os.getenv("PAT_GITHUB_TOKEN") or os.getenv("GITHUB_TOKEN")
-    username = os.getenv("GH_USERNAME") or os.getenv("GITHUB_USERNAME") or "Aastha008"
+    raw_token = os.getenv("PAT_GITHUB_TOKEN") or os.getenv("GITHUB_TOKEN") or ""
+    raw_username = os.getenv("GH_USERNAME") or os.getenv("GITHUB_USERNAME") or "Aastha008"
+
+    token = "".join(raw_token.strip().split())
+    username = raw_username.strip()
 
     if token:
         rename_github_repositories(username, token)
     else:
         print("\nNote: No GITHUB_TOKEN or PAT_GITHUB_TOKEN found in environment.")
-        print("To rename the remote repositories on GitHub, run this via the GitHub Actions workflow")
-        print("or run with: python rename_previous_repos.py with your PAT token set.")
+        print("To rename the remote repositories on GitHub, run this via the GitHub Actions workflow.")
 
 
 if __name__ == "__main__":
