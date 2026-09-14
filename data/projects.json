@@ -199,6 +199,16 @@
       "github_url": "https://github.com/Aastha008/shadowmesh-ops",
       "status": "published",
       "description": "ShadowMesh Ops is a full-stack reverse proxy, traffic shadowing, and canary release governance platform. It non-intrusively intercepts live HTTP requests, duplicates sanitized user payloads to secondary canary microservices in real-time, and computes structural response divergence, latency drift, and error rates. The platform includes an interactive web dashboard for configuring dynamic traffic routing, inspecting live payload diffs, and triggering automated circuit-breaking rollbacks."
+    },
+    {
+      "date": "2026-09-14",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "SchemaHazard Engine",
+      "repository": "schemahazard-engine",
+      "github_url": "https://github.com/Aastha008/schemahazard-engine",
+      "status": "published",
+      "description": "An automated zero-downtime database migration hazard analyzer and lock risk evaluation engine. It statically parses raw SQL and ORM migration scripts, models DDL table rewrite hazards and lock severity levels, tests backward compatibility against active query workloads, and provides actionable remediation blueprints before deployment."
     }
   ]
 }
