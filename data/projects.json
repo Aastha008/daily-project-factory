@@ -109,6 +109,16 @@
       "github_url": "https://github.com/Aastha008/minimal-pdf-chat",
       "status": "published",
       "description": "Production-ready semantic document context engine with dynamic chunk re-ranking, token budget optimizer, and citation verification."
+    },
+    {
+      "date": "2026-09-15",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Resume Analyzer",
+      "repository": "resume-analyzer",
+      "github_url": "https://github.com/Aastha008/resume-analyzer",
+      "status": "published",
+      "description": "A structured natural language processing utility that ingests candidate resumes, extracts core competency graphs, and compares them against target job descriptions to calculate objective skill-gap metrics and suggest resume improvements."
     }
   ]
 }
