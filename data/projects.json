@@ -119,6 +119,16 @@
       "github_url": "https://github.com/Aastha008/resume-analyzer",
       "status": "published",
       "description": "A structured natural language processing utility that ingests candidate resumes, extracts core competency graphs, and compares them against target job descriptions to calculate objective skill-gap metrics and suggest resume improvements."
+    },
+    {
+      "date": "2026-09-16",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "API Tester",
+      "repository": "api-tester",
+      "github_url": "https://github.com/Aastha008/api-tester",
+      "status": "published",
+      "description": "A lightweight, browser-based API testing workstation that allows developers to construct HTTP requests, inspect headers, validate JSON payloads, and manage environment variables locally without leaving their browser."
     }
   ]
 }
