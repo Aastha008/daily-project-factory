@@ -129,6 +129,16 @@
       "github_url": "https://github.com/Aastha008/api-tester",
       "status": "published",
       "description": "A lightweight, browser-based API testing workstation that allows developers to construct HTTP requests, inspect headers, validate JSON payloads, and manage environment variables locally without leaving their browser."
+    },
+    {
+      "date": "2026-09-17",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Sales Dashboard",
+      "repository": "sales-dashboard",
+      "github_url": "https://github.com/Aastha008/sales-dashboard",
+      "status": "published",
+      "description": "A lightweight exploratory data analysis and reporting dashboard that ingests raw transactional CSVs, performs automated data cleaning, and renders interactive metric cards and cohort retention charts using Streamlit and DuckDB."
     }
   ]
 }
