@@ -139,6 +139,16 @@
       "github_url": "https://github.com/Aastha008/sales-dashboard",
       "status": "published",
       "description": "A lightweight exploratory data analysis and reporting dashboard that ingests raw transactional CSVs, performs automated data cleaning, and renders interactive metric cards and cohort retention charts using Streamlit and DuckDB."
+    },
+    {
+      "date": "2026-09-18",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Churn Predictor",
+      "repository": "churn-predictor",
+      "github_url": "https://github.com/Aastha008/churn-predictor",
+      "status": "published",
+      "description": "A production-grade machine learning classification pipeline and FastAPI service that predicts customer churn probability based on historical usage metrics and billing interactions, enabling proactive retention strategies."
     }
   ]
 }
