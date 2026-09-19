@@ -149,6 +149,16 @@
       "github_url": "https://github.com/Aastha008/churn-predictor",
       "status": "published",
       "description": "A production-grade machine learning classification pipeline and FastAPI service that predicts customer churn probability based on historical usage metrics and billing interactions, enabling proactive retention strategies."
+    },
+    {
+      "date": "2026-09-19",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Web Change Monitor",
+      "repository": "web-change-monitor",
+      "github_url": "https://github.com/Aastha008/web-change-monitor",
+      "status": "published",
+      "description": "An automated web change detection service that periodically monitors targeted web pages, extracts specific content blocks, and notifies developers of structural or text diffs. It helps teams track vendor documentation updates, API changelogs, and site availability without manual checking."
     }
   ]
 }
