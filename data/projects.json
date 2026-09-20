@@ -159,6 +159,16 @@
       "github_url": "https://github.com/Aastha008/web-change-monitor",
       "status": "published",
       "description": "An automated web change detection service that periodically monitors targeted web pages, extracts specific content blocks, and notifies developers of structural or text diffs. It helps teams track vendor documentation updates, API changelogs, and site availability without manual checking."
+    },
+    {
+      "date": "2026-09-20",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Feature Flag Manager",
+      "repository": "feature-flag-manager",
+      "github_url": "https://github.com/Aastha008/feature-flag-manager",
+      "status": "published",
+      "description": "A lightweight, self-hosted feature toggle server and management dashboard for controlling code rollouts, user targeting rules, and instant circuit breaking. It enables engineering teams to dynamically alter system behavior in real time across multiple environments without redeploying code."
     }
   ]
 }
