@@ -169,6 +169,16 @@
       "github_url": "https://github.com/Aastha008/feature-flag-manager",
       "status": "published",
       "description": "A lightweight, self-hosted feature toggle server and management dashboard for controlling code rollouts, user targeting rules, and instant circuit breaking. It enables engineering teams to dynamically alter system behavior in real time across multiple environments without redeploying code."
+    },
+    {
+      "date": "2026-09-21",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "API Mock Server",
+      "repository": "api-mock-server",
+      "github_url": "https://github.com/Aastha008/api-mock-server",
+      "status": "published",
+      "description": "A lightweight, file-configured local HTTP mock server and response generator that lets developers simulate complex REST APIs, latency profiles, and failure scenarios during frontend and integration testing."
     }
   ]
 }
