@@ -179,6 +179,16 @@
       "github_url": "https://github.com/Aastha008/api-mock-server",
       "status": "published",
       "description": "A lightweight, file-configured local HTTP mock server and response generator that lets developers simulate complex REST APIs, latency profiles, and failure scenarios during frontend and integration testing."
+    },
+    {
+      "date": "2026-09-22",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Support Ticket Router",
+      "repository": "support-ticket-router",
+      "github_url": "https://github.com/Aastha008/support-ticket-router",
+      "status": "published",
+      "description": "An automated triage service that ingests customer support requests, extracts structured intent and sentiment, retrieves relevant resolution context, and routes tickets to appropriate queues with pre-drafted response suggestions."
     }
   ]
 }
