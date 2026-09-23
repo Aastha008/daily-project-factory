@@ -189,6 +189,16 @@
       "github_url": "https://github.com/Aastha008/support-ticket-router",
       "status": "published",
       "description": "An automated triage service that ingests customer support requests, extracts structured intent and sentiment, retrieves relevant resolution context, and routes tickets to appropriate queues with pre-drafted response suggestions."
+    },
+    {
+      "date": "2026-09-23",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Webhook Inspector",
+      "repository": "webhook-inspector",
+      "github_url": "https://github.com/Aastha008/webhook-inspector",
+      "status": "published",
+      "description": "A developer tool and web dashboard for receiving, inspecting, and replaying HTTP webhooks in real time. It gives engineering teams full visibility into incoming third-party payload structures, signature headers, and failure states during integration development."
     }
   ]
 }
