@@ -199,6 +199,16 @@
       "github_url": "https://github.com/Aastha008/webhook-inspector",
       "status": "published",
       "description": "A developer tool and web dashboard for receiving, inspecting, and replaying HTTP webhooks in real time. It gives engineering teams full visibility into incoming third-party payload structures, signature headers, and failure states during integration development."
+    },
+    {
+      "date": "2026-09-24",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "CSV Data Cleaner",
+      "repository": "csv-data-cleaner",
+      "github_url": "https://github.com/Aastha008/csv-data-cleaner",
+      "status": "published",
+      "description": "A lightweight web application that ingests messy tabular datasets, automatically identifies common data quality issues like missing values and type mismatches, and applies robust cleaning rules to export production-ready CSVs."
     }
   ]
 }
