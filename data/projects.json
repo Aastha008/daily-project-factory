@@ -209,6 +209,16 @@
       "github_url": "https://github.com/Aastha008/csv-data-cleaner",
       "status": "published",
       "description": "A lightweight web application that ingests messy tabular datasets, automatically identifies common data quality issues like missing values and type mismatches, and applies robust cleaning rules to export production-ready CSVs."
+    },
+    {
+      "date": "2026-09-25",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Price Predictor",
+      "repository": "price-predictor",
+      "github_url": "https://github.com/Aastha008/price-predictor",
+      "status": "published",
+      "description": "A lightweight machine learning pricing service that ingests property or asset attributes, processes tabular features through Scikit-Learn pipelines, and serves rapid valuation estimates via FastAPI endpoints. It allows real estate or retail teams to benchmark fair market values dynamically."
     }
   ]
 }
