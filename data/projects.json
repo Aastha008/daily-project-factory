@@ -219,6 +219,16 @@
       "github_url": "https://github.com/Aastha008/price-predictor",
       "status": "published",
       "description": "A lightweight machine learning pricing service that ingests property or asset attributes, processes tabular features through Scikit-Learn pipelines, and serves rapid valuation estimates via FastAPI endpoints. It allows real estate or retail teams to benchmark fair market values dynamically."
+    },
+    {
+      "date": "2026-09-26",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Link Checker",
+      "repository": "link-checker",
+      "github_url": "https://github.com/Aastha008/link-checker",
+      "status": "published",
+      "description": "An automated web crawler and validation tool that scans documentation sites and web applications to discover broken URLs, dead anchors, and unexpected redirect chains. It generates structured reports and terminal dashboards to help teams maintain search engine hygiene and user trust."
     }
   ]
 }
