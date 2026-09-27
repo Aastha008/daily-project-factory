@@ -229,6 +229,16 @@
       "github_url": "https://github.com/Aastha008/link-checker",
       "status": "published",
       "description": "An automated web crawler and validation tool that scans documentation sites and web applications to discover broken URLs, dead anchors, and unexpected redirect chains. It generates structured reports and terminal dashboards to help teams maintain search engine hygiene and user trust."
+    },
+    {
+      "date": "2026-09-27",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Contract Tracker",
+      "repository": "contract-tracker",
+      "github_url": "https://github.com/Aastha008/contract-tracker",
+      "status": "published",
+      "description": "A centralized web application for managing vendor subscriptions, service agreements, and renewal timelines. It gives operations and finance teams real-time visibility into active commitments, contract terms, and upcoming cancellation deadlines to prevent unwanted auto-renewals."
     }
   ]
 }
