@@ -239,6 +239,16 @@
       "github_url": "https://github.com/Aastha008/contract-tracker",
       "status": "published",
       "description": "A centralized web application for managing vendor subscriptions, service agreements, and renewal timelines. It gives operations and finance teams real-time visibility into active commitments, contract terms, and upcoming cancellation deadlines to prevent unwanted auto-renewals."
+    },
+    {
+      "date": "2026-09-28",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Log Redactor",
+      "repository": "log-redactor",
+      "github_url": "https://github.com/Aastha008/log-redactor",
+      "status": "published",
+      "description": "A high-performance CLI tool and library for identifying and masking sensitive information (PII) within application logs and text streams. It ensures data privacy compliance by scrubbing credentials, emails, and personal identifiers before logs are transmitted to external monitoring platforms."
     }
   ]
 }
