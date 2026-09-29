@@ -249,6 +249,16 @@
       "github_url": "https://github.com/Aastha008/log-redactor",
       "status": "published",
       "description": "A high-performance CLI tool and library for identifying and masking sensitive information (PII) within application logs and text streams. It ensures data privacy compliance by scrubbing credentials, emails, and personal identifiers before logs are transmitted to external monitoring platforms."
+    },
+    {
+      "date": "2026-09-29",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "API Doc Generator",
+      "repository": "api-doc-generator",
+      "github_url": "https://github.com/Aastha008/api-doc-generator",
+      "status": "skipped",
+      "description": "An automated documentation generator that parses raw Python source code and FastAPI route definitions to synthesize comprehensive OpenAPI-compliant documentation with natural language endpoint descriptions and usage examples."
     }
   ]
 }
