@@ -259,6 +259,16 @@
       "github_url": "https://github.com/Aastha008/api-doc-generator",
       "status": "skipped",
       "description": "An automated documentation generator that parses raw Python source code and FastAPI route definitions to synthesize comprehensive OpenAPI-compliant documentation with natural language endpoint descriptions and usage examples."
+    },
+    {
+      "date": "2026-09-30",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Form Builder",
+      "repository": "form-builder",
+      "github_url": "https://github.com/Aastha008/form-builder",
+      "status": "skipped",
+      "description": "A web application for designing custom dynamic forms, embedding them onto web clients, and capturing validated submissions. It provides a visual schema builder, server-side payload validation, and a dashboard for viewing and exporting response analytics."
     }
   ]
 }
