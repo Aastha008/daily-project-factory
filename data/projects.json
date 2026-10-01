@@ -269,6 +269,16 @@
       "github_url": "https://github.com/Aastha008/form-builder",
       "status": "skipped",
       "description": "A web application for designing custom dynamic forms, embedding them onto web clients, and capturing validated submissions. It provides a visual schema builder, server-side payload validation, and a dashboard for viewing and exporting response analytics."
+    },
+    {
+      "date": "2026-10-01",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Survey Analyzer",
+      "repository": "survey-analyzer",
+      "github_url": "https://github.com/Aastha008/survey-analyzer",
+      "status": "skipped",
+      "description": "A lightweight exploratory data analysis and reporting toolkit designed to ingest raw questionnaire results, automatically compute descriptive statistics, and generate interactive visual dashboards for customer feedback and research data."
     }
   ]
 }
