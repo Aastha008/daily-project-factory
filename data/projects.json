@@ -279,6 +279,16 @@
       "github_url": "https://github.com/Aastha008/survey-analyzer",
       "status": "skipped",
       "description": "A lightweight exploratory data analysis and reporting toolkit designed to ingest raw questionnaire results, automatically compute descriptive statistics, and generate interactive visual dashboards for customer feedback and research data."
+    },
+    {
+      "date": "2026-10-02",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Customer Churn Predictor",
+      "repository": "customer-churn-predictor",
+      "github_url": "https://github.com/Aastha008/customer-churn-predictor",
+      "status": "skipped",
+      "description": "A machine learning prediction service that ingests subscription and usage telemetry, processes tabular features through trained Scikit-Learn pipelines, and serves churn risk probabilities via FastAPI endpoints to help retention teams intervene early."
     }
   ]
 }
