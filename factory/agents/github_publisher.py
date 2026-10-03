@@ -107,10 +107,11 @@ class GitHubPublisherAgent:
                     "clone_url": f"https://github.com/{owner}/{repo_slug}.git",
                 }
             elif resp.status_code in [401, 403]:
+                tok_preview = f"{self.github_token[:4]}... (len {len(self.github_token)})" if self.github_token else "None"
                 factory_logger.error(
-                    f"GitHub API authentication failed (HTTP {resp.status_code}). "
-                    "The provided token lacks repository creation permissions. "
-                    "Please ensure PAT_GITHUB_TOKEN has the 'repo' scope."
+                    f"GitHub API authentication failed (HTTP {resp.status_code}): {resp.text.strip()}. "
+                    f"Token info: {tok_preview}. "
+                    "Please ensure PAT_GITHUB_TOKEN is a valid Classic Personal Access Token starting with 'ghp_' and having the 'repo' scope."
                 )
                 owner = settings.github_organization or self.github_username
                 return {
