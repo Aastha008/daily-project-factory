@@ -127,8 +127,16 @@ def main(args: Optional[list[str]] = None) -> int:
             print("\n" + report_text + "\n")
 
         status = final_state.get("project_status", "unknown")
-        if status in ["published", "completed", "skipped"]:
+        if status in ["published", "completed"]:
             return 0
+        elif status == "skipped":
+            if parsed.dry_run or parsed.skip_github:
+                return 0
+            factory_logger.error(
+                "Project creation succeeded, but remote repository publishing was skipped or failed. "
+                "Ensure PAT_GITHUB_TOKEN is valid and has 'repo' scope."
+            )
+            return 1
         else:
             factory_logger.error(f"Execution concluded with non-success status: {status}")
             return 1

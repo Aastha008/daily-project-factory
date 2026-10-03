@@ -33,7 +33,8 @@ class GitHubPublisherAgent:
         dry_run: bool = False,
         skip_github: bool = False,
     ):
-        self.github_token = (github_token or settings.github_token or "").strip() or None
+        raw_token = github_token or settings.github_token or ""
+        self.github_token = "".join(raw_token.strip().split()) or None
         self.github_username = (github_username or settings.github_username or "Aastha008").strip()
         self.github_email = (github_email or settings.github_email or f"{self.github_username}@users.noreply.github.com").strip()
         self.dry_run = dry_run or settings.dry_run
