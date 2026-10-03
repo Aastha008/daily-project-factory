@@ -24,6 +24,16 @@ def _clean_env(key: str, default: Optional[str] = None) -> Optional[str]:
     return default
 
 
+def _clean_token(key: str) -> Optional[str]:
+    """Retrieve and sanitize secret token, ignoring boolean strings and whitespace."""
+    val = os.getenv(key)
+    if val is not None:
+        cleaned = "".join(val.strip().split())
+        if cleaned and cleaned.lower() not in ["true", "false", "none", "null"]:
+            return cleaned
+    return None
+
+
 # Schedule mapping per specification
 WEEKLY_SCHEDULE: Dict[str, Dict[str, str]] = {
     "Monday": {
@@ -79,7 +89,7 @@ class Settings(BaseModel):
 
     # GitHub Settings
     github_token: Optional[str] = Field(
-        default_factory=lambda: _clean_env("PAT_GITHUB_TOKEN") or _clean_env("GITHUB_TOKEN")
+        default_factory=lambda: _clean_token("PAT_GITHUB_TOKEN") or _clean_token("GITHUB_TOKEN")
     )
     github_username: Optional[str] = Field(
         default_factory=lambda: _clean_env("GH_USERNAME") or _clean_env("GITHUB_USERNAME", "Aastha008")
