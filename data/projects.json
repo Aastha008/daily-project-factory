@@ -289,6 +289,16 @@
       "github_url": "https://github.com/Aastha008/customer-churn-predictor",
       "status": "skipped",
       "description": "A machine learning prediction service that ingests subscription and usage telemetry, processes tabular features through trained Scikit-Learn pipelines, and serves churn risk probabilities via FastAPI endpoints to help retention teams intervene early."
+    },
+    {
+      "date": "2026-10-03",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Simple Web Change Monitor",
+      "repository": "simple-web-change-monitor",
+      "github_url": "https://github.com/Aastha008/simple-web-change-monitor",
+      "status": "published",
+      "description": "An automated web monitoring service that routinely fetches target web pages, normalizes DOM structures, and detects content or structural shifts over time. It provides teams with automated diff generation, alert dispatching, and audit logging for tracked digital assets."
     }
   ]
 }
