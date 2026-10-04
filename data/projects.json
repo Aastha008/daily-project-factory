@@ -299,6 +299,16 @@
       "github_url": "https://github.com/Aastha008/simple-web-change-monitor",
       "status": "published",
       "description": "An automated web monitoring service that routinely fetches target web pages, normalizes DOM structures, and detects content or structural shifts over time. It provides teams with automated diff generation, alert dispatching, and audit logging for tracked digital assets."
+    },
+    {
+      "date": "2026-10-04",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Status Page Manager",
+      "repository": "status-page-manager",
+      "github_url": "https://github.com/Aastha008/status-page-manager",
+      "status": "published",
+      "description": "A self-hosted web application for tracking service availability, publishing real-time incident updates, and displaying operational health metrics. It provides both an administrative dashboard for incident management and a public status view for stakeholders."
     }
   ]
 }
