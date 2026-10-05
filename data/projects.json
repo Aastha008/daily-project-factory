@@ -309,6 +309,16 @@
       "github_url": "https://github.com/Aastha008/status-page-manager",
       "status": "published",
       "description": "A self-hosted web application for tracking service availability, publishing real-time incident updates, and displaying operational health metrics. It provides both an administrative dashboard for incident management and a public status view for stakeholders."
+    },
+    {
+      "date": "2026-10-05",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Config Validator",
+      "repository": "config-validator",
+      "github_url": "https://github.com/Aastha008/config-validator",
+      "status": "published",
+      "description": "A command-line tool and validation utility for inspecting and verifying application configuration files across development and production environments. It validates nested YAML, JSON, TOML, and .env files against strict Pydantic models and produces human-friendly terminal diffs to catch configuration drift before deployment."
     }
   ]
 }
