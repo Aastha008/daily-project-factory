@@ -329,6 +329,16 @@
       "github_url": "https://github.com/Aastha008/meeting-notes",
       "status": "published",
       "description": "An automated audio transcription and summarization service that converts raw meeting recordings into structured action items, discussion points, and searchable transcripts. It leverages local language models and vector embeddings to allow teams to query past conversations and extract critical project decisions effortlessly."
+    },
+    {
+      "date": "2026-10-09",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Ticket Classifier",
+      "repository": "ticket-classifier",
+      "github_url": "https://github.com/Aastha008/ticket-classifier",
+      "status": "published",
+      "description": "A machine learning service that categorizes incoming customer support tickets, detects urgency levels, and suggests appropriate routing queues. It exposes REST endpoints for single-ticket inference, batch CSV classification, and pipeline retraining using Scikit-Learn and FastAPI."
     }
   ]
 }
