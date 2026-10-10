@@ -339,6 +339,16 @@
       "github_url": "https://github.com/Aastha008/ticket-classifier",
       "status": "published",
       "description": "A machine learning service that categorizes incoming customer support tickets, detects urgency levels, and suggests appropriate routing queues. It exposes REST endpoints for single-ticket inference, batch CSV classification, and pipeline retraining using Scikit-Learn and FastAPI."
+    },
+    {
+      "date": "2026-10-10",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Scraping Job Scheduler",
+      "repository": "scraping-job-scheduler",
+      "github_url": "https://github.com/Aastha008/scraping-job-scheduler",
+      "status": "published",
+      "description": "An automated system for orchestrating, executing, and monitoring periodic web scraping workflows. It extracts structured web data using configurable selector rules, validates payloads against strict schemas, and exports results to external webhooks or storage targets."
     }
   ]
 }
