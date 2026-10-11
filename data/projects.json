@@ -349,6 +349,16 @@
       "github_url": "https://github.com/Aastha008/scraping-job-scheduler",
       "status": "published",
       "description": "An automated system for orchestrating, executing, and monitoring periodic web scraping workflows. It extracts structured web data using configurable selector rules, validates payloads against strict schemas, and exports results to external webhooks or storage targets."
+    },
+    {
+      "date": "2026-10-11",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Simple Feature Flag Manager",
+      "repository": "simple-feature-flag-manager",
+      "github_url": "https://github.com/Aastha008/simple-feature-flag-manager",
+      "status": "published",
+      "description": "A self-hosted management console and evaluation service for runtime feature toggles and progressive rollouts. It provides engineering teams with an administrative web interface to configure targeted release rules and a low-latency API for querying feature states across environments."
     }
   ]
 }
