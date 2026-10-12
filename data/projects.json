@@ -359,6 +359,16 @@
       "github_url": "https://github.com/Aastha008/simple-feature-flag-manager",
       "status": "published",
       "description": "A self-hosted management console and evaluation service for runtime feature toggles and progressive rollouts. It provides engineering teams with an administrative web interface to configure targeted release rules and a low-latency API for querying feature states across environments."
+    },
+    {
+      "date": "2026-10-12",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Log Sanitizer",
+      "repository": "log-sanitizer",
+      "github_url": "https://github.com/Aastha008/log-sanitizer",
+      "status": "published",
+      "description": "A high-performance command-line utility and Python library for detecting, redacting, and masking sensitive data in application logs, database dumps, and trace outputs. It uses configurable regex rules and structural parsing to strip personally identifiable information (PII), secret tokens, and credentials before logs reach storage or third-party aggregators."
     }
   ]
 }
