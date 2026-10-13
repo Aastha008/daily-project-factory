@@ -369,6 +369,16 @@
       "github_url": "https://github.com/Aastha008/log-sanitizer",
       "status": "published",
       "description": "A high-performance command-line utility and Python library for detecting, redacting, and masking sensitive data in application logs, database dumps, and trace outputs. It uses configurable regex rules and structural parsing to strip personally identifiable information (PII), secret tokens, and credentials before logs reach storage or third-party aggregators."
+    },
+    {
+      "date": "2026-10-13",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "API Spec Generator",
+      "repository": "api-spec-generator",
+      "github_url": "https://github.com/Aastha008/api-spec-generator",
+      "status": "published",
+      "description": "An automated utility that analyzes legacy controller code, database schemas, and sample payloads to generate compliant OpenAPI 3.0 documentation. It leverages local language models and strict Pydantic parsing to draft detailed endpoint descriptions, response schemas, and error codes with minimal developer intervention."
     }
   ]
 }
