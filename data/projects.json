@@ -379,6 +379,16 @@
       "github_url": "https://github.com/Aastha008/api-spec-generator",
       "status": "published",
       "description": "An automated utility that analyzes legacy controller code, database schemas, and sample payloads to generate compliant OpenAPI 3.0 documentation. It leverages local language models and strict Pydantic parsing to draft detailed endpoint descriptions, response schemas, and error codes with minimal developer intervention."
+    },
+    {
+      "date": "2026-10-14",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Invoice Generator",
+      "repository": "invoice-generator",
+      "github_url": "https://github.com/Aastha008/invoice-generator",
+      "status": "published",
+      "description": "A lightweight web application for creating, managing, and exporting professional PDF invoices for freelancers and small businesses. It features dynamic line-item calculation, client management, and persistent storage via a local SQLite database."
     }
   ]
 }
