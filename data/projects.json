@@ -389,6 +389,16 @@
       "github_url": "https://github.com/Aastha008/invoice-generator",
       "status": "published",
       "description": "A lightweight web application for creating, managing, and exporting professional PDF invoices for freelancers and small businesses. It features dynamic line-item calculation, client management, and persistent storage via a local SQLite database."
+    },
+    {
+      "date": "2026-10-15",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Simple Sales Dashboard",
+      "repository": "simple-sales-dashboard",
+      "github_url": "https://github.com/Aastha008/simple-sales-dashboard",
+      "status": "published",
+      "description": "An interactive web dashboard for exploring retail sales metrics, customer purchasing patterns, and revenue trends. It combines DuckDB for high-performance analytical queries with Streamlit and Plotly to render responsive charts and exploratory data analysis views."
     }
   ]
 }
