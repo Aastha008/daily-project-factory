@@ -399,6 +399,16 @@
       "github_url": "https://github.com/Aastha008/simple-sales-dashboard",
       "status": "published",
       "description": "An interactive web dashboard for exploring retail sales metrics, customer purchasing patterns, and revenue trends. It combines DuckDB for high-performance analytical queries with Streamlit and Plotly to render responsive charts and exploratory data analysis views."
+    },
+    {
+      "date": "2026-10-16",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Simple Customer Churn Predictor",
+      "repository": "simple-customer-churn-predictor",
+      "github_url": "https://github.com/Aastha008/simple-customer-churn-predictor",
+      "status": "published",
+      "description": "A lightweight machine learning pipeline and REST API that evaluates subscriber retention metrics and predicts customer churn risk. It uses Scikit-Learn classifiers and pandas data processing pipelines to score user accounts in real time and generate explainable feature importance reports."
     }
   ]
 }
