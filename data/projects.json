@@ -409,6 +409,16 @@
       "github_url": "https://github.com/Aastha008/simple-customer-churn-predictor",
       "status": "published",
       "description": "A lightweight machine learning pipeline and REST API that evaluates subscriber retention metrics and predicts customer churn risk. It uses Scikit-Learn classifiers and pandas data processing pipelines to score user accounts in real time and generate explainable feature importance reports."
+    },
+    {
+      "date": "2026-10-17",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Website Change Monitor",
+      "repository": "website-change-monitor",
+      "github_url": "https://github.com/Aastha008/website-change-monitor",
+      "status": "published",
+      "description": "An automated monitoring service that tracks textual and structural changes across target web pages over time. It fetches page content on configurable schedules, filters out dynamic clutter, calculates DOM diffs against baseline snapshots, and delivers real-time notifications when significant changes or specific keyword triggers occur."
     }
   ]
 }
