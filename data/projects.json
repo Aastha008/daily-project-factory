@@ -439,6 +439,16 @@
       "github_url": "https://github.com/Aastha008/webhook-relay",
       "status": "published",
       "description": "A lightweight local development utility and reverse proxy for capturing, inspecting, and replaying incoming HTTP webhooks. It records raw payloads and headers into an embedded SQLite database and provides both a terminal dashboard and local management API to re-dispatch events against local development servers."
+    },
+    {
+      "date": "2026-10-20",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Documentation Search",
+      "repository": "documentation-search",
+      "github_url": "https://github.com/Aastha008/documentation-search",
+      "status": "published",
+      "description": "A retrieval-augmented generation search tool that indexes internal technical documentation, markdown repositories, and developer guides into a vector store. It provides a web API that returns precise answers with inline citations, exact source line references, and direct document links."
     }
   ]
 }
