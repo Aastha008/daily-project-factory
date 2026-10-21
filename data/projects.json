@@ -449,6 +449,16 @@
       "github_url": "https://github.com/Aastha008/documentation-search",
       "status": "published",
       "description": "A retrieval-augmented generation search tool that indexes internal technical documentation, markdown repositories, and developer guides into a vector store. It provides a web API that returns precise answers with inline citations, exact source line references, and direct document links."
+    },
+    {
+      "date": "2026-10-21",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Feedback Board",
+      "repository": "feedback-board",
+      "github_url": "https://github.com/Aastha008/feedback-board",
+      "status": "published",
+      "description": "A self-hosted customer feedback and feature request portal where users can submit, vote on, and discuss product suggestions. It helps product teams organize backlogs based on real user demand and publish public roadmap updates."
     }
   ]
 }
