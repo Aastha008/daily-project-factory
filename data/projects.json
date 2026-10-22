@@ -459,6 +459,16 @@
       "github_url": "https://github.com/Aastha008/feedback-board",
       "status": "published",
       "description": "A self-hosted customer feedback and feature request portal where users can submit, vote on, and discuss product suggestions. It helps product teams organize backlogs based on real user demand and publish public roadmap updates."
+    },
+    {
+      "date": "2026-10-22",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Daily PDF Chat",
+      "repository": "daily-pdf-chat",
+      "github_url": "https://github.com/Aastha008/daily-pdf-chat",
+      "status": "published",
+      "description": "A lightweight web application and command-line utility for instantly generating exploratory data analysis reports from tabular datasets. It automatically detects schema anomalies, calculates descriptive statistics, and renders distribution charts for data hygiene checks."
     }
   ]
 }
