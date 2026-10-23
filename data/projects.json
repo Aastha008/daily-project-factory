@@ -469,6 +469,16 @@
       "github_url": "https://github.com/Aastha008/daily-pdf-chat",
       "status": "published",
       "description": "A lightweight web application and command-line utility for instantly generating exploratory data analysis reports from tabular datasets. It automatically detects schema anomalies, calculates descriptive statistics, and renders distribution charts for data hygiene checks."
+    },
+    {
+      "date": "2026-10-23",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Customer Segmentation Tool",
+      "repository": "customer-segmentation-tool",
+      "github_url": "https://github.com/Aastha008/customer-segmentation-tool",
+      "status": "published",
+      "description": "A lightweight machine learning service that ingests transaction and user engagement data to automatically cluster customers into behavioral segments. It uses Scikit-Learn for K-Means clustering and PCA dimensionality reduction, serving real-time segment assignments via a FastAPI endpoint."
     }
   ]
 }
