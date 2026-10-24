@@ -479,6 +479,16 @@
       "github_url": "https://github.com/Aastha008/customer-segmentation-tool",
       "status": "published",
       "description": "A lightweight machine learning service that ingests transaction and user engagement data to automatically cluster customers into behavioral segments. It uses Scikit-Learn for K-Means clustering and PCA dimensionality reduction, serving real-time segment assignments via a FastAPI endpoint."
+    },
+    {
+      "date": "2026-10-24",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Changelog Aggregator",
+      "repository": "changelog-aggregator",
+      "github_url": "https://github.com/Aastha008/changelog-aggregator",
+      "status": "published",
+      "description": "An automated service that monitors, scrapes, and consolidates release notes across software repositories and package registries. It normalizes unstructured release notes into a unified data model, detects breaking changes and security fixes, and delivers periodic digest reports via terminal dashboards and webhooks."
     }
   ]
 }
