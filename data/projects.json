@@ -489,6 +489,16 @@
       "github_url": "https://github.com/Aastha008/changelog-aggregator",
       "status": "published",
       "description": "An automated service that monitors, scrapes, and consolidates release notes across software repositories and package registries. It normalizes unstructured release notes into a unified data model, detects breaking changes and security fixes, and delivers periodic digest reports via terminal dashboards and webhooks."
+    },
+    {
+      "date": "2026-10-25",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Minimal Feature Flag Manager",
+      "repository": "minimal-feature-flag-manager",
+      "github_url": "https://github.com/Aastha008/minimal-feature-flag-manager",
+      "status": "published",
+      "description": "A web application and API service for managing runtime feature toggles, canary rollouts, and targeting rules across software environments. It provides an intuitive administrative dashboard alongside low-latency flag evaluation endpoints for application clients."
     }
   ]
 }
