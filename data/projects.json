@@ -499,6 +499,16 @@
       "github_url": "https://github.com/Aastha008/minimal-feature-flag-manager",
       "status": "published",
       "description": "A web application and API service for managing runtime feature toggles, canary rollouts, and targeting rules across software environments. It provides an intuitive administrative dashboard alongside low-latency flag evaluation endpoints for application clients."
+    },
+    {
+      "date": "2026-10-26",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Database Schema Diff",
+      "repository": "database-schema-diff",
+      "github_url": "https://github.com/Aastha008/database-schema-diff",
+      "status": "published",
+      "description": "A lightweight CLI utility and Python library for inspecting, comparing, and detecting drift across relational database schemas. It parses live database connections or raw DDL SQL files, generates detailed structural diff reports, and highlights missing indexes, altered column types, and foreign key mismatches."
     }
   ]
 }
