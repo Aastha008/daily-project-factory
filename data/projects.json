@@ -509,6 +509,16 @@
       "github_url": "https://github.com/Aastha008/database-schema-diff",
       "status": "published",
       "description": "A lightweight CLI utility and Python library for inspecting, comparing, and detecting drift across relational database schemas. It parses live database connections or raw DDL SQL files, generates detailed structural diff reports, and highlights missing indexes, altered column types, and foreign key mismatches."
+    },
+    {
+      "date": "2026-10-28",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Simple API Mock Server",
+      "repository": "simple-api-mock-server",
+      "github_url": "https://github.com/Aastha008/simple-api-mock-server",
+      "status": "published",
+      "description": "A developer tool and web application for defining, managing, and serving custom mock HTTP endpoints. It enables frontend and integration teams to stub out backend dependencies with configurable response payloads, status codes, latency simulation, and schema validation."
     }
   ]
 }
