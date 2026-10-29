@@ -519,6 +519,16 @@
       "github_url": "https://github.com/Aastha008/simple-api-mock-server",
       "status": "published",
       "description": "A developer tool and web application for defining, managing, and serving custom mock HTTP endpoints. It enables frontend and integration teams to stub out backend dependencies with configurable response payloads, status codes, latency simulation, and schema validation."
+    },
+    {
+      "date": "2026-10-29",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Funnel Analytics Dashboard",
+      "repository": "funnel-analytics-dashboard",
+      "github_url": "https://github.com/Aastha008/funnel-analytics-dashboard",
+      "status": "published",
+      "description": "A lightweight event analytics application for ingesting user clickstream logs and visualizing multi-step conversion funnels. It leverages DuckDB for fast in-memory event aggregation and renders interactive drop-off charts and cohort metrics using Streamlit and Plotly."
     }
   ]
 }
