@@ -529,6 +529,16 @@
       "github_url": "https://github.com/Aastha008/funnel-analytics-dashboard",
       "status": "published",
       "description": "A lightweight event analytics application for ingesting user clickstream logs and visualizing multi-step conversion funnels. It leverages DuckDB for fast in-memory event aggregation and renders interactive drop-off charts and cohort metrics using Streamlit and Plotly."
+    },
+    {
+      "date": "2026-10-30",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Simple Churn Predictor",
+      "repository": "simple-churn-predictor",
+      "github_url": "https://github.com/Aastha008/simple-churn-predictor",
+      "status": "published",
+      "description": "A lightweight machine learning service that analyzes customer usage telemetry and account metadata to predict churn risk. It handles feature extraction, model training via Scikit-Learn, and low-latency inference through a FastAPI web service."
     }
   ]
 }
