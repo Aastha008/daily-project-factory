@@ -539,6 +539,16 @@
       "github_url": "https://github.com/Aastha008/simple-churn-predictor",
       "status": "published",
       "description": "A lightweight machine learning service that analyzes customer usage telemetry and account metadata to predict churn risk. It handles feature extraction, model training via Scikit-Learn, and low-latency inference through a FastAPI web service."
+    },
+    {
+      "date": "2026-11-01",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Uptime Monitor",
+      "repository": "uptime-monitor",
+      "github_url": "https://github.com/Aastha008/uptime-monitor",
+      "status": "published",
+      "description": "A self-hosted service health and uptime tracking application with an integrated dashboard. It periodically probes configured HTTP and TCP endpoints, persists latency metrics to an SQLite database, and surfaces downtime incidents in real time."
     }
   ]
 }
