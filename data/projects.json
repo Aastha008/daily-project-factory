@@ -549,6 +549,16 @@
       "github_url": "https://github.com/Aastha008/uptime-monitor",
       "status": "published",
       "description": "A self-hosted service health and uptime tracking application with an integrated dashboard. It periodically probes configured HTTP and TCP endpoints, persists latency metrics to an SQLite database, and surfaces downtime incidents in real time."
+    },
+    {
+      "date": "2026-11-02",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Log File Analyzer",
+      "repository": "log-file-analyzer",
+      "github_url": "https://github.com/Aastha008/log-file-analyzer",
+      "status": "published",
+      "description": "A high-performance CLI utility and inspection tool for parsing, querying, and analyzing web server and application log files. It automatically detects common log formats, aggregates performance metrics, and presents interactive visual summaries in the terminal."
     }
   ]
 }
