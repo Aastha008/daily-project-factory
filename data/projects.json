@@ -559,6 +559,16 @@
       "github_url": "https://github.com/Aastha008/log-file-analyzer",
       "status": "published",
       "description": "A high-performance CLI utility and inspection tool for parsing, querying, and analyzing web server and application log files. It automatically detects common log formats, aggregates performance metrics, and presents interactive visual summaries in the terminal."
+    },
+    {
+      "date": "2026-11-03",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Contract Risk Analyzer",
+      "repository": "contract-risk-analyzer",
+      "github_url": "https://github.com/Aastha008/contract-risk-analyzer",
+      "status": "published",
+      "description": "An automated legal document review service that parses contract files, extracts key legal clauses, and evaluates them against custom compliance rules using RAG. It helps legal and procurement teams rapidly flag high-risk terms in vendor agreements and non-disclosure contracts."
     }
   ]
 }
