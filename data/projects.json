@@ -569,6 +569,16 @@
       "github_url": "https://github.com/Aastha008/contract-risk-analyzer",
       "status": "published",
       "description": "An automated legal document review service that parses contract files, extracts key legal clauses, and evaluates them against custom compliance rules using RAG. It helps legal and procurement teams rapidly flag high-risk terms in vendor agreements and non-disclosure contracts."
+    },
+    {
+      "date": "2026-11-04",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Webhook Delivery Manager",
+      "repository": "webhook-delivery-manager",
+      "github_url": "https://github.com/Aastha008/webhook-delivery-manager",
+      "status": "published",
+      "description": "A web application and proxy service for ingesting, inspecting, and reliably forwarding third-party webhooks to internal application endpoints. It features a real-time dashboard for inspecting payload headers, configuring delivery retry logic, and replaying failed requests."
     }
   ]
 }
