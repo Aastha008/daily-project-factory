@@ -589,6 +589,16 @@
       "github_url": "https://github.com/Aastha008/data-quality-auditor",
       "status": "published",
       "description": "A web-based utility for profiling tabular datasets to detect structural inconsistencies, missing values, and statistical outliers. It provides a visual report on data health and suggests automated cleaning operations to normalize datasets before downstream analysis."
+    },
+    {
+      "date": "2026-11-06",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Demand Forecaster",
+      "repository": "demand-forecaster",
+      "github_url": "https://github.com/Aastha008/demand-forecaster",
+      "status": "published",
+      "description": "A machine learning service that predicts future product demand and inventory requirements based on historical transaction logs and promotional events. It trains regression models on temporal telemetry, evaluates metric accuracy, and serves prediction endpoints for inventory planning pipelines."
     }
   ]
 }
