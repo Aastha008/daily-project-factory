@@ -599,6 +599,16 @@
       "github_url": "https://github.com/Aastha008/demand-forecaster",
       "status": "published",
       "description": "A machine learning service that predicts future product demand and inventory requirements based on historical transaction logs and promotional events. It trains regression models on temporal telemetry, evaluates metric accuracy, and serves prediction endpoints for inventory planning pipelines."
+    },
+    {
+      "date": "2026-11-07",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Web Content Monitor",
+      "repository": "web-content-monitor",
+      "github_url": "https://github.com/Aastha008/web-content-monitor",
+      "status": "published",
+      "description": "A lightweight background service and CLI utility for tracking visual, text, and structural changes across target web pages. It periodically scrapes specified URLs, parses targeted CSS selectors, and alerts users when meaningful content modifications occur."
     }
   ]
 }
