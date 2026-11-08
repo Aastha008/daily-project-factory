@@ -609,6 +609,16 @@
       "github_url": "https://github.com/Aastha008/web-content-monitor",
       "status": "published",
       "description": "A lightweight background service and CLI utility for tracking visual, text, and structural changes across target web pages. It periodically scrapes specified URLs, parses targeted CSS selectors, and alerts users when meaningful content modifications occur."
+    },
+    {
+      "date": "2026-11-08",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Vendor License Tracker",
+      "repository": "vendor-license-tracker",
+      "github_url": "https://github.com/Aastha008/vendor-license-tracker",
+      "status": "published",
+      "description": "Vendor License Tracker is a full-stack web application for tracking enterprise software subscriptions, seat allocations, and vendor contracts. It provides visibility into recurring software costs, alerts teams to upcoming contract renewal windows, and identifies underutilized licenses."
     }
   ]
 }
