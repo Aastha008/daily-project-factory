@@ -619,6 +619,16 @@
       "github_url": "https://github.com/Aastha008/vendor-license-tracker",
       "status": "published",
       "description": "Vendor License Tracker is a full-stack web application for tracking enterprise software subscriptions, seat allocations, and vendor contracts. It provides visibility into recurring software costs, alerts teams to upcoming contract renewal windows, and identifies underutilized licenses."
+    },
+    {
+      "date": "2026-11-09",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "API Contract Tester",
+      "repository": "api-contract-tester",
+      "github_url": "https://github.com/Aastha008/api-contract-tester",
+      "status": "published",
+      "description": "API Contract Tester is a Python CLI utility and validation suite that verifies running HTTP web services against their OpenAPI specifications. It generates contract tests automatically, executes targeted request scenarios, and asserts response payload structures and HTTP status codes."
     }
   ]
 }
