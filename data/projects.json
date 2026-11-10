@@ -629,6 +629,16 @@
       "github_url": "https://github.com/Aastha008/api-contract-tester",
       "status": "published",
       "description": "API Contract Tester is a Python CLI utility and validation suite that verifies running HTTP web services against their OpenAPI specifications. It generates contract tests automatically, executes targeted request scenarios, and asserts response payload structures and HTTP status codes."
+    },
+    {
+      "date": "2026-11-10",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Incident Postmortem Generator",
+      "repository": "incident-postmortem-generator",
+      "github_url": "https://github.com/Aastha008/incident-postmortem-generator",
+      "status": "published",
+      "description": "An automated incident analysis utility that ingests operational logs, chat exports, and system alerts to draft structured postmortem reports. It reconstructs chronological event timelines, performs LLM-driven root cause extraction, and outputs standardized postmortem documents."
     }
   ]
 }
