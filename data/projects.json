@@ -639,6 +639,16 @@
       "github_url": "https://github.com/Aastha008/incident-postmortem-generator",
       "status": "published",
       "description": "An automated incident analysis utility that ingests operational logs, chat exports, and system alerts to draft structured postmortem reports. It reconstructs chronological event timelines, performs LLM-driven root cause extraction, and outputs standardized postmortem documents."
+    },
+    {
+      "date": "2026-11-11",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Daily Feature Flag Manager",
+      "repository": "daily-feature-flag-manager",
+      "github_url": "https://github.com/Aastha008/daily-feature-flag-manager",
+      "status": "published",
+      "description": "A self-hosted web application and micro-service for creating, managing, and evaluating feature toggles across multiple application environments. It provides real-time rule evaluation, targeted percentage rollouts, and visual telemetry on flag usage."
     }
   ]
 }
