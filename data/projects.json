@@ -649,6 +649,16 @@
       "github_url": "https://github.com/Aastha008/daily-feature-flag-manager",
       "status": "published",
       "description": "A self-hosted web application and micro-service for creating, managing, and evaluating feature toggles across multiple application environments. It provides real-time rule evaluation, targeted percentage rollouts, and visual telemetry on flag usage."
+    },
+    {
+      "date": "2026-11-12",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Cohort Analyzer",
+      "repository": "cohort-analyzer",
+      "github_url": "https://github.com/Aastha008/cohort-analyzer",
+      "status": "published",
+      "description": "An interactive data analytics platform for parsing transactional and user event logs to analyze retention rates, churn dynamics, and customer lifetime value. It leverages DuckDB for high-performance SQL transformations and Streamlit with Plotly for dynamic cohort heatmaps and decay curves."
     }
   ]
 }
