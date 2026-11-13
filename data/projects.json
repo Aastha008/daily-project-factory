@@ -659,6 +659,16 @@
       "github_url": "https://github.com/Aastha008/cohort-analyzer",
       "status": "published",
       "description": "An interactive data analytics platform for parsing transactional and user event logs to analyze retention rates, churn dynamics, and customer lifetime value. It leverages DuckDB for high-performance SQL transformations and Streamlit with Plotly for dynamic cohort heatmaps and decay curves."
+    },
+    {
+      "date": "2026-11-13",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Minimal Customer Churn Predictor",
+      "repository": "minimal-customer-churn-predictor",
+      "github_url": "https://github.com/Aastha008/minimal-customer-churn-predictor",
+      "status": "published",
+      "description": "A service that processes historical user interaction and billing data to identify accounts at risk of cancellation. It provides actionable insights by scoring customer health and highlighting key behavioral drivers of churn."
     }
   ]
 }
