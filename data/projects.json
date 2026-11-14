@@ -669,6 +669,16 @@
       "github_url": "https://github.com/Aastha008/minimal-customer-churn-predictor",
       "status": "published",
       "description": "A service that processes historical user interaction and billing data to identify accounts at risk of cancellation. It provides actionable insights by scoring customer health and highlighting key behavioral drivers of churn."
+    },
+    {
+      "date": "2026-11-14",
+      "day": "Saturday",
+      "category": "Automation",
+      "project_name": "Broken Link Checker",
+      "repository": "broken-link-checker",
+      "github_url": "https://github.com/Aastha008/broken-link-checker",
+      "status": "published",
+      "description": "A high-performance background service and CLI utility that recursively crawls web domains to detect broken hyperlinks, malformed URLs, and redirect loops. It parses site HTML trees, validates HTTP response codes concurrently, and outputs actionable site health reports."
     }
   ]
 }
