@@ -679,6 +679,16 @@
       "github_url": "https://github.com/Aastha008/broken-link-checker",
       "status": "published",
       "description": "A high-performance background service and CLI utility that recursively crawls web domains to detect broken hyperlinks, malformed URLs, and redirect loops. It parses site HTML trees, validates HTTP response codes concurrently, and outputs actionable site health reports."
+    },
+    {
+      "date": "2026-11-15",
+      "day": "Sunday",
+      "category": "Full Stack",
+      "project_name": "Webhook Delivery Tracker",
+      "repository": "webhook-delivery-tracker",
+      "github_url": "https://github.com/Aastha008/webhook-delivery-tracker",
+      "status": "published",
+      "description": "A self-hosted web application for receiving, inspecting, and retrying incoming and outgoing HTTP webhooks. It logs delivery attempts, validates HMAC signatures, and presents an interactive web interface for payload debugging and manual re-transmissions."
     }
   ]
 }
