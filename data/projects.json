@@ -689,6 +689,16 @@
       "github_url": "https://github.com/Aastha008/webhook-delivery-tracker",
       "status": "published",
       "description": "A self-hosted web application for receiving, inspecting, and retrying incoming and outgoing HTTP webhooks. It logs delivery attempts, validates HMAC signatures, and presents an interactive web interface for payload debugging and manual re-transmissions."
+    },
+    {
+      "date": "2026-11-16",
+      "day": "Monday",
+      "category": "Python",
+      "project_name": "Log Data Sanitizer",
+      "repository": "log-data-sanitizer",
+      "github_url": "https://github.com/Aastha008/log-data-sanitizer",
+      "status": "published",
+      "description": "Log Data Sanitizer is a Python CLI utility and processing library for detecting, masking, and anonymizing sensitive personal information (PII) within application logs and structured data payloads. It enables engineering teams to safely share operational telemetry with external monitoring platforms and local development environments without violating data privacy compliance."
     }
   ]
 }
