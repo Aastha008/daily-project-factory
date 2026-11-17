@@ -699,6 +699,16 @@
       "github_url": "https://github.com/Aastha008/log-data-sanitizer",
       "status": "published",
       "description": "Log Data Sanitizer is a Python CLI utility and processing library for detecting, masking, and anonymizing sensitive personal information (PII) within application logs and structured data payloads. It enables engineering teams to safely share operational telemetry with external monitoring platforms and local development environments without violating data privacy compliance."
+    },
+    {
+      "date": "2026-11-17",
+      "day": "Tuesday",
+      "category": "AI",
+      "project_name": "Meeting Action Taker",
+      "repository": "meeting-action-taker",
+      "github_url": "https://github.com/Aastha008/meeting-action-taker",
+      "status": "published",
+      "description": "A focused utility that processes audio transcripts from video conferencing platforms to extract actionable tasks, decisions, and owner assignments. It maps extracted items to structured Pydantic models to ensure consistency across team project management tools."
     }
   ]
 }
