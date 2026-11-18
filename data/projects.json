@@ -709,6 +709,16 @@
       "github_url": "https://github.com/Aastha008/meeting-action-taker",
       "status": "published",
       "description": "A focused utility that processes audio transcripts from video conferencing platforms to extract actionable tasks, decisions, and owner assignments. It maps extracted items to structured Pydantic models to ensure consistency across team project management tools."
+    },
+    {
+      "date": "2026-11-18",
+      "day": "Wednesday",
+      "category": "Web Development",
+      "project_name": "Subscription Billing Monitor",
+      "repository": "subscription-billing-monitor",
+      "github_url": "https://github.com/Aastha008/subscription-billing-monitor",
+      "status": "published",
+      "description": "A centralized dashboard that aggregates and visualizes recurring billing data from various SaaS providers and cloud services. It enables teams to monitor monthly burn rates, detect duplicate subscriptions, and identify unexpected price hikes across organizational accounts."
     }
   ]
 }
