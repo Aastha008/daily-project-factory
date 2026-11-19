@@ -719,6 +719,16 @@
       "github_url": "https://github.com/Aastha008/subscription-billing-monitor",
       "status": "published",
       "description": "A centralized dashboard that aggregates and visualizes recurring billing data from various SaaS providers and cloud services. It enables teams to monitor monthly burn rates, detect duplicate subscriptions, and identify unexpected price hikes across organizational accounts."
+    },
+    {
+      "date": "2026-11-19",
+      "day": "Thursday",
+      "category": "Data Analytics",
+      "project_name": "Ab Test Analyzer",
+      "repository": "ab-test-analyzer",
+      "github_url": "https://github.com/Aastha008/ab-test-analyzer",
+      "status": "published",
+      "description": "AB Test Analyzer is an interactive analytics web application and statistical evaluation engine for experimentation data. It ingests user interaction logs, performs sample validation and hypothesis testing, and generates decision-ready reports with confidence intervals and power calculations."
     }
   ]
 }
