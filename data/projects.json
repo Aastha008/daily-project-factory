@@ -729,6 +729,16 @@
       "github_url": "https://github.com/Aastha008/ab-test-analyzer",
       "status": "published",
       "description": "AB Test Analyzer is an interactive analytics web application and statistical evaluation engine for experimentation data. It ingests user interaction logs, performs sample validation and hypothesis testing, and generates decision-ready reports with confidence intervals and power calculations."
+    },
+    {
+      "date": "2026-11-20",
+      "day": "Friday",
+      "category": "Machine Learning",
+      "project_name": "Support Ticket Classifier",
+      "repository": "support-ticket-classifier",
+      "github_url": "https://github.com/Aastha008/support-ticket-classifier",
+      "status": "published",
+      "description": "Support Ticket Classifier is a machine learning microservice that automatically categorizes incoming customer support requests and predicts urgency levels based on ticket text and metadata. It includes reproducible Scikit-Learn training pipelines, joblib artifact versioning, and a lightweight FastAPI service for real-time routing."
     }
   ]
 }
